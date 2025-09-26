@@ -88,17 +88,14 @@
             <h2>Chainlink 的核心服務解析</h2>
             <div class="info-cards">
               <div class="info-card">
-                <span class="info-card-icon">📈</span>
                 <h4 class="info-card-title">去中心化數據源 (Data Feeds)</h4>
                 <p class="info-card-desc">聚合來自多個獨立節點的數據，為 DeFi 協議提供可靠、防篡改的資產價格，是其最核心的應用。</p>
               </div>
               <div class="info-card">
-                <span class="info-card-icon">🎲</span>
                 <h4 class="info-card-title">可驗證隨機函數 (VRF)</h4>
                 <p class="info-card-desc">為鏈上遊戲、NFT 抽獎等應用提供可驗證、防操控的隨機數，確保公平性。</p>
               </div>
               <div class="info-card">
-                <span class="info-card-icon">🌐</span>
                 <h4 class="info-card-title">跨鏈互操作協議 (CCIP)</h4>
                 <p class="info-card-desc">允許不同區塊鏈之間的智能合約互相發送訊息和轉移價值，是實現「萬鏈互聯」願景的關鍵。</p>
               </div>
@@ -113,14 +110,12 @@
             <div class="comparison-cards">
               <div class="comparison-card">
                 <div class="comparison-card-header">
-                  <span class="comparison-card-icon">🔗</span>
                   <h4 class="comparison-card-title">Chainlink (請求/響應模型)</h4>
                 </div>
                 <p class="comparison-card-desc">當需要數據時，智能合約主動向 Chainlink 網絡發起請求，節點獲取數據後再回傳至鏈上。這種模式如同<strong>「隨叫隨到」的專車服務</strong>，極其可靠和安全，但更新頻率相對較低。</p>
               </div>
               <div class="comparison-card">
                 <div class="comparison-card-header">
-                  <span class="comparison-card-icon">🐍</span>
                   <h4 class="comparison-card-title">Pyth (推送模型)</h4>
                 </div>
                 <p class="comparison-card-desc">數據提供者（如交易所）持續將價格數據「推送」到鏈下，用戶在需要時自行提取並提交至鏈上。這種模式<strong>更新速度極快</strong>，適合高頻交易，但對數據使用者的要求更高。</p>
@@ -186,23 +181,59 @@
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         const tocList = document.getElementById('toc-list');
-        const article = document.querySelector('.article-container');
-        if (!tocList || !article) {
+        const articleContent = document.querySelector('.article-container');
+        if (!tocList || !articleContent) {
             return;
         }
 
-        const headings = article.querySelectorAll('h2');
-        let tocHTML = '';
+        const headings = articleContent.querySelectorAll('h2');
+        const tocLinks = [];
 
+        // 1. Generate TOC and add IDs to headings
         headings.forEach((heading, index) => {
             const id = 'toc-heading-' + index;
             heading.setAttribute('id', id);
             
-            const listItem = `<li><a href="#${id}">${heading.textContent}</a></li>`;
-            tocHTML += listItem;
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.textContent = heading.textContent;
+            a.href = `#${id}`;
+            li.appendChild(a);
+            tocList.appendChild(li);
+            tocLinks.push(a);
         });
 
-        tocList.innerHTML = tocHTML;
+        // 2. Implement Smooth Scrolling
+        tocList.addEventListener('click', function(e) {
+            if (e.target.tagName === 'A') {
+                e.preventDefault();
+                const targetId = e.target.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }
+        });
+
+        // 3. Implement Active Highlighting on Scroll
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                const id = entry.target.getAttribute('id');
+                const tocLink = document.querySelector(`.toc a[href="#${id}"]`);
+                
+                if (entry.isIntersecting) {
+                    tocLinks.forEach(link => link.classList.remove('active'));
+                    tocLink.classList.add('active');
+                }
+            });
+        }, {
+            rootMargin: '-20% 0px -80% 0px' // Highlight when heading is in the top 20% of the viewport
+        });
+
+        headings.forEach(heading => observer.observe(heading));
     });
     </script>
 
