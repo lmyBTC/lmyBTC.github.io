@@ -1,0 +1,45 @@
+/* CSS for Topic Pages */
+
+.topic-page-header {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: var(--secondary-bg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.topic-page-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.topic-page-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.article-list-section {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.article-list-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+}
+
+.placeholder-text {
+    color: var(--text-secondary);
+    font-style: italic;
+    text-align: center;
+    padding: 40px;
+    background-color: var(--secondary-bg);
+    border-radius: 8px;
+    border: 1px dashed var(--border-color);
+}

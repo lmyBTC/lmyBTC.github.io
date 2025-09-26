@@ -23,14 +23,21 @@
   </url>
 
   <url>
-    <loc>https://lmybtc.github.io/post/chainlink-oracle-deep-dive.html</loc>
+    <loc>https://lmybtc.github.io/post/chainlink.html</loc>
     <lastmod>2024-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://lmybtc.github.io/post/layer-2-solutions.html</loc>
+    <loc>https://lmybtc.github.io/post/chainlink.html</loc>
+    <lastmod>2024-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://lmybtc.github.io/post/layer-2.html</loc>
     <lastmod>2024-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

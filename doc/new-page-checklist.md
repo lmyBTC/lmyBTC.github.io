@@ -1,222 +1,219 @@
-# 📋 新增頁面檢查清單
+# SOP: 新增文章頁面標準作業流程
 
-當您要為網站新增頁面時，請按照以下步驟確保頁面完整且符合網站標準。
+本文檔定義了為 `LMY's Crypto Blog` 新增一篇文章的標準作業流程 (Standard Operating Procedure)。請嚴格遵循此流程以確保網站的品質、一致性和可維護性。
 
-## 🎯 快速檢查清單
+## 📋 快速檢查清單 (TL;DR)
 
-- [ ] 建立 HTML 檔案
-- [ ] 加入 GA4 分析組件
-- [ ] 加入 Header 組件
-- [ ] 加入 Footer 組件
-- [ ] **更新文章彙整頁面**
-- [ ] **新增內部連結**
-- [ ] 更新 sitemap.xml
-- [ ] **最終驗證**
+- [ ] **內容**：在 `post/` 資料夾中建立新文章的 `.html` 檔案。
+- [ ] **結構**：使用下方提供的標準範本，填寫所有 `meta` 和 `JSON-LD` 資訊。
+- [ ] **目錄**：確保文章中的章節標題使用 `<h2>` 標籤，以便自動生成側邊欄目錄。
+- [ ] **列表**：更新 `post/archive.html`，新增指向新文章的文章卡片。
+- [ ] **地圖**：更新根目錄的 `sitemap.xml`，加入新文章的 URL。
+- [ ] **連結**：在至少一篇相關的舊文章中，加入新文章的內部連結。
+- [ ] **驗證**：完成本地端 QA 檢查（無失效連結、無主控台錯誤、響應式正常）。
 
 ---
 
 ## 📝 詳細步驟指南
 
-### 1️⃣ **建立基本 HTML 結構**
+### 步驟 1：建立文章檔案
 
-使用以下模板作為新頁面的起點：
+1.  在 `post/` 資料夾下，建立一個新的 HTML 檔案，例如 `my-awesome-article.html`。
+    - **命名規則**: 若是介紹特定專案，檔名應直接使用專案的小寫名稱，例如 `chainlink.html` 或 `solana.html`。
+    - **主題頁面**: 若是關於某個主題的彙整頁，檔名應使用 `topic-[主題].html` 的格式，例如 `topic-btc.html`。
+2.  **複製並貼上**以下標準範本。這是確保頁面結構、樣式、SEO 和動態目錄功能正常的基礎。
+    > **重要**: 建議直接複製現有的文章檔案（如 `post/chainlink.html`）來確保所有腳本和結構都是最新的。
 
 ```html
 <!DOCTYPE html>
-<html lang="zh-TW">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>頁面標題 | CryptoPulse</title>
-    <meta name="description" content="頁面描述（建議 150-160 字元）" />
-    <meta name="keywords" content="關鍵字1, 關鍵字2, 關鍵字3" />
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-    <link rel="shortcut icon" type="image/svg+xml" href="../favicon.svg">
+    <!-- ▼ SEO Meta - 請務必填寫 ▼ -->
+    <title>文章標題 | LMY's Crypto Blog</title>
+    <meta name="description" content="這篇文章的簡短描述，約 150 字元，會顯示在 Google 搜尋結果中。">
+    <meta name="keywords" content="主要關鍵字, 相關關鍵字, 次要關鍵字">
+    <meta name="google-site-verification" content="F1sAja4V6KTk17SiojYOS8UF1GP9-hu8TXI8iVKQ27Y" />
+    <!-- ▲ SEO Meta - 請務必填寫 ▲ -->
 
-    <!-- JSON-LD for Structured Data (SEO) -->
+    <!-- ▼ JSON-LD (結構化資料) - 請務必填寫 ▼ -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Article",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://your-crypto-pulse-domain.xyz/post/your-new-page.html"
+        "@id": "https://lmybtc.github.io/post/project-name.html" // <== 修改為新文章的完整 URL
       },
-      "headline": "文章主標題",
-      "description": "文章的詳細描述",
-      "image": "https://your-crypto-pulse-domain.xyz/assets/images/your-og-image.jpg",
+      "headline": "文章主標題 (應與 <title> 標籤內容相似)",
+      "description": "這篇文章的詳細描述 (可與 meta description 相同)",
       "author": {
         "@type": "Organization",
-        "name": "CryptoPulse",
-        "url": "https://your-crypto-pulse-domain.xyz/"
+        "name": "LMY's Crypto Blog",
+        "url": "https://lmybtc.github.io/"
       },
       "publisher": {
         "@type": "Organization",
-        "name": "CryptoPulse",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://your-crypto-pulse-domain.xyz/assets/images/logo-for-google.png"
-        }
+        "name": "LMY's Crypto Blog"
       },
-      "datePublished": "YYYY-MM-DD",
-      "dateModified": "YYYY-MM-DD"
+      "datePublished": "YYYY-MM-DD", // <== 修改為發布日期
+      "dateModified": "YYYY-MM-DD"  // <== 修改為最後修改日期
     }
     </script>
+    <!-- ▲ JSON-LD (結構化資料) - 請務必填寫 ▲ -->
 
-    <style>
-      /* 頁面樣式 */
-    </style>
-  </head>
-  <body>
-    <!-- Header Component Container -->
-    <div id="header-component"></div>
+    <!-- 樣式檔案 -->
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="../assets/css/article.css">
+</head>
+<body>
 
-    <!-- 主要內容區域 -->
+    <header class="site-header">
+        <!-- Header 內容會由全局樣式和結構定義 -->
+    </header>
+
     <main>
-      <!-- 您的頁面內容 -->
+        <div class="article-layout container">
+            <aside class="toc-sidebar">
+                <nav class="toc">
+                    <h3>文章目錄</h3>
+                    <ul id="toc-list"></ul>
+                </nav>
+            </aside>
+            <article class="article-container">
+                <h1>文章主標題</h1>
+                <p class="article-meta">發布日期：YYYY-MM-DD</p>
+
+                <!-- ▼ 文章內容開始 ▼ -->
+
+                <div class="alert alert-tip">
+                  <strong>💡 30 秒速讀版：</strong>
+                  <ul>
+                    <li>重點一</li>
+                    <li>重點二</li>
+                  </ul>
+                </div>
+
+                <h2 id="toc-heading-0">第一章節標題</h2>
+                <p>這是第一章節的內容...</p>
+
+                <h2 id="toc-heading-1">第二章節標題</h2>
+                <p>這是第二章節的內容...</p>
+
+                <!-- ▲ 文章內容結束 ▲ -->
+
+            </article>
+        </div>
     </main>
 
-    <!-- Footer Component Container -->
-    <div id="footer-component"></div>
+    <footer class="site-footer">
+        <!-- Footer 內容會由全局樣式和結構定義 -->
+    </footer>
 
-    <!-- Load Components -->
-    <script src="../assets/js/deus-analytics-component.js"></script>
-    <script src="../assets/js/deus-header-component.js"></script>
-    <script src="../assets/js/deus-footer-component.js"></script>
-
+    <!-- 目錄生成腳本 -->
     <script>
-      // 初始化組件
+    document.addEventListener('DOMContentLoaded', function() {
+        const tocList = document.getElementById('toc-list');
+        const article = document.querySelector('.article-container');
+        if (!tocList || !article) return;
+
+        const headings = article.querySelectorAll('h2');
+        headings.forEach((heading, index) => {
+            const id = heading.id || 'toc-heading-' + index;
+            heading.id = id;
+            const listItem = `<li><a href="#${id}">${heading.textContent}</a></li>`;
+            tocList.innerHTML += listItem;
+        });
+    });
     </script>
-  </body>
+
+</body>
 </html>
 ```
 
-### 2️⃣ **加入 GA4 分析追蹤**
+### 步驟 2：更新文章總覽頁面 (`archive.html`)
 
-在 `<script>` 標籤中加入以下初始化代碼：
+1.  打開 `post/archive.html`。
+2.  在 `<div class="archive-grid">` 內，複製一個現有的 `<div class="article-card">` 區塊並貼上。
+3.  修改新卡片的內容：
+    -   **`data-category`**：設定文章分類（如 `layer-2`, `infrastructure`, `analysis`）。
+    -   **`data-published`** 和 **`data-modified`**：設定發布與修改日期，格式為 `YYYY-MM-DD`。
+    -   修改標題、描述、關鍵字和連結，使其指向你的新文章。
 
-```javascript
-// Initialize Components
-document.addEventListener("DOMContentLoaded", function () {
-  // Initialize Analytics Component
-  if (window.DeusAnalyticsComponent) {
-    new window.DeusAnalyticsComponent().setDebug(false).setEnvironment("production");
-  }
+### 步驟 3：更新網站地圖 (`sitemap.xml`)
 
-  // 其他組件初始化...
-});
-```
+1.  打開根目錄的 `sitemap.xml`。
+2.  在 `</urlset>` 標籤前，新增一個 `<url>` 區塊。
 
-### 3️⃣ **加入 Header 組件**
+    ```xml
+    <url>
+      <loc>https://lmybtc.github.io/post/project-name.html</loc>
+      <lastmod>YYYY-MM-DD</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+    </url>
+    ```
+3.  將 `<loc>` 和 `<lastmod>` 更新為新文章的正確資訊。
 
-在初始化代碼中繼續加入：
+### 步驟 4：品質保證 (QA)
 
-```javascript
-// Initialize Header Component
-const headerContainer = document.getElementById("header-component");
-if (headerContainer && window.DeusHeaderComponent) {
-  new window.DeusHeaderComponent(headerContainer).setDebug(false);
-}
-```
+在提交變更前，執行以下最終檢查：
 
-### 4️⃣ **加入 Footer 組件**
-
-在初始化代碼中加入：
-
-```javascript
-// Initialize Footer Component
-const footerContainer = document.getElementById("footer-component");
-if (footerContainer && window.DeusFooterComponent) {
-  new window.DeusFooterComponent(footerContainer).setDebug(false);
-}
-```
-
-### 5️⃣ **更新文章彙整頁面**
-
-若新增的是文章頁面，請打開 `/post/archive.html`，手動新增該篇文章的卡片資訊，以確保目錄同步更新。
-
-### 6️⃣ **新增內部連結**
-
-思考新頁面與既有頁面的關聯性，在至少 1-2 個相關的舊頁面中，加入連向此新頁面的文字連結，以建立更緊密的站內連結結構。
-
-### 7️⃣ **更新 sitemap.xml**
-
-打開 `/sitemap.xml` 檔案，在 `</urlset>` 標籤前加入新頁面：
-
-```xml
-<url>
-  <loc>https://your-crypto-pulse-domain.xyz/post/your-new-page.html</loc>
-  <lastmod>YYYY-MM-DD</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.8</priority>
-</url>
-```
-
-**優先級建議：**
-
-- 首頁: `1.0`
-- 重要文章/分類頁: `0.8`
-- 一般文章: `0.6-0.7`
-- 輔助頁面: `0.4-0.5`
-
-**更新頻率建議：**
-
-- `daily`: 每日更新的內容
-- `weekly`: 每週更新的內容
-- `monthly`: 每月更新的內容
-- `yearly`: 很少更新的內容
-
-### 8️⃣ **最終驗證**
-
-- **響應式檢查**：在桌面和手機兩種尺寸下，檢查頁面排版是否正常。
-- **連結檢查**：點擊頁面上的所有連結，確保沒有失效連結 (404)。
-- **主控台檢查**：在瀏覽器中打開開發者工具 (F12)，確認 Console 面板沒有任何紅色錯誤訊息。
-
-### 9️⃣ **路徑注意事項**
-
-根據頁面位置調整腳本路徑：
-
-| 頁面位置                             | 腳本路徑範例                   |
-| ------------------------------------ | ------------------------------ |
-| 根目錄 `/index.html`                 | `src="assets/js/xxx.js"`       |
-| 子目錄 `/post/xxx.html`              | `src="../assets/js/xxx.js"`    |
-| 二級子目錄 `/post/category/xxx.html` | `src="../../assets/js/xxx.js"` |
+-   [ ] **本地預覽**：在本地伺服器上打開新頁面，確認樣式正常。
+-   [ ] **連結檢查**：點擊頁面上的所有內部和外部連結，確保它們都能正確跳轉，沒有 404 錯誤。
+-   [ ] **主控台檢查**：按 `F12` 打開瀏覽器開發者工具，切換到 `Console` (主控台) 分頁，確認沒有任何紅色錯誤訊息。
+-   [ ] **響應式檢查**：縮放瀏覽器視窗，或使用開發者工具的裝置模擬功能，檢查在手機寬度下排版是否正常，特別是圖片和表格。
 
 ---
 
-## 📚 專案技術參考
+## 🏆 進階最佳實踐 (Advanced Best Practices)
 
-此處記錄專案的技術細節與部署流程，作為維護時的參考。
+除了完成上述基本流程，遵循以下實踐能顯著提升網站的專業度和品質。
 
-### 🚀 專案特色
+### 1. SEO 與無障礙性 (Accessibility)
 
-- **現代化設計**：採用深色主題，提供專注的閱讀體驗。
-- **靜態化生成**：純 HTML/CSS/JS，無需複雜後端，易於部署在 GitHub Pages 或任何靜態主機上。
-- **組件化**：頁首 (Header)、頁尾 (Footer) 和分析 (Analytics) 均為可重用組件。
-- **SEO 友好**：內建 JSON-LD 結構化資料和標準 Meta 標籤，優化搜尋引擎排名。
-- **響應式設計**：自動適應桌面、平板和手機裝置。
+-   **圖片替代文字 (Alt Text)**：為所有 `<img>` 標籤添加描述性的 `alt` 屬性。這不僅在圖片無法載入時提供備用資訊，更是螢幕閱讀器使用者理解圖片內容的唯一途徑，同時對 Google 圖片搜尋的 SEO 至關重要。
+    ```html
+    <img src="..." alt="一張圖表，顯示比特幣從2020到2024的價格走勢">
+    ```
+-   **語意化 HTML**：盡可能使用語意化標籤（如 `<article>`, `<section>`, `<figure>`, `<blockquote>`）來組織您的內容。這有助於搜尋引擎和輔助技術更好地理解您的頁面結構。
+-   **友善的 URL**：文章的檔名應簡短、具描述性，並使用連字號 `-` 分隔單字。根據我們的最新規範，一般文章頁請直接使用「項目名稱.html」（例如 `chainlink.html`），主題頁則使用 `topic-[主題].html`。
 
-### 🛠️ 技術堆疊
+### 2. 圖片優化
 
-- **HTML5**
-- **CSS3** (使用 CSS 變數)
-- **JavaScript (ES6)**
+大型圖片是拖慢網站載入速度的主要元兇。在上傳任何圖片到專案之前，請務必進行壓縮。
 
-### 🏗️ 專案結構
+-   **使用工具**：推薦使用 [TinyPNG](https://tinypng.com/) 或 [Squoosh](https://squoosh.app/) 等線上工具，可以在幾乎不影響視覺品質的情況下，將圖片檔案大小減少 50-80%。
+-   **選擇格式**：
+    -   **WebP**：優先考慮的現代格式，兼具品質與壓縮率。
+    -   **JPEG**：適用於照片和複雜的漸層圖片。
+    -   **PNG**：適用於需要透明背景的圖片（如 Logo）。
 
+### 3. 版本控制 (Git)
+
+一個清晰的 Git 提交歷史對於長期維護至關重要。當您新增一篇文章時，請使用以下格式撰寫 Commit Message：
+
+```bash
+feat(post): Add new article on [文章主題]
+
+- 撰寫了關於 [文章主題] 的深度分析。
+- 新增了對應的文章卡片和網站地圖條目。
 ```
-lmyBTC.github.io/
-├── index.html                   # 網站首頁
-├── post/                        # 文章目錄
-├── assets/                      # 靜態資源 (CSS, JS, 圖片)
-├── doc/                         # 專案文件
-├── .github/workflows/deploy.yml # 自動化部署腳本
-├── sitemap.xml                  # 網站地圖
-└── README.md                    # 專案入口
-```
 
-### 自動化部署
+**範例：**
+`feat(post): Add new article on Bitcoin Layer 2 solutions`
 
-本專案已設定 GitHub Actions (`.github/workflows/deploy.yml`)。當 `main` 分支有任何更新時，會自動將網站內容部署到公開的 `lmyBTC/lmyBTC.github.io` 倉庫。
+### 4. 發布前自我審查 (Self-Review)
+
+在您準備好提交變更之前，花五分鐘時間，像審查別人的程式碼一樣，重新檢查一次自己的變更。這個短暫的步驟能發現許多原本會被忽略的小錯誤。
+
+-   **閱讀流暢性**：從頭到尾通讀一次文章，檢查是否有錯別字或不通順的語句。
+-   **程式碼一致性**：檢查新加入的 HTML/CSS 是否遵循了專案現有的風格和縮排。
+-   **最終確認**：再次對照本文件的快速檢查清單，確保沒有遺漏任何步驟。
+
+
+---
+
+> **注意**：關於專案的整體架構、技術棧和部署流程的更詳細資訊，請參閱根目錄的 `README.md` 檔案。
