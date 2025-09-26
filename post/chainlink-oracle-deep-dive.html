@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chainlink (LINK) 深度解析：連接區塊鏈與現實世界的橋樑 | LMY's Crypto Blog</title>
-    <meta name="description" content="全面分析 Chainlink 如何作為去中心化預言機龍頭，解決智能合約的數據問題，並探討其在 DeFi、RWA 等領域的應用與未來潛力。">
+    <title>Chainlink (LINK) 完整指南：5分鐘搞懂3大核心服務，為何它是驅動 DeFi 與 RWA 的 Web3 基礎設施？ | LMY's Crypto Blog</title>
+    <meta name="description" content="這份完整指南將帶您在5分鐘內搞懂 Chainlink 的3大核心服務（Data Feeds, VRF, CCIP），並解析為何它能成為驅動 DeFi 與 RWA 的關鍵 Web3 基礎設施。">
     <meta name="keywords" content="Chainlink, LINK, 預言機, Oracle, 智能合約, DeFi, RWA, 區塊鏈">
+    <meta name="google-site-verification" content="F1sAja4V6KTk17SiojYOS8UF1GP9-hu8TXI8iVKQ27Y" />
     
     <link rel="stylesheet" href="../main.css">
     <link rel="stylesheet" href="../assets/css/article.css">
@@ -19,8 +20,8 @@
         "@type": "WebPage",
         "@id": "https://lmybtc.github.io/post/chainlink-oracle-deep-dive.html"
       },
-      "headline": "Chainlink (LINK) 深度解析：連接區塊鏈與現實世界的橋樑",
-      "description": "全面分析 Chainlink 如何作為去中心化預言機龍頭，解決智能合約的數據問題，並探討其在 DeFi、RWA 等領域的應用與未來潛力。",
+      "headline": "Chainlink (LINK) 完整指南：5分鐘搞懂3大核心服務，為何它是驅動 DeFi 與 RWA 的 Web3 基礎設施？",
+      "description": "這份完整指南將帶您在5分鐘內搞懂 Chainlink 的3大核心服務（Data Feeds, VRF, CCIP），並解析為何它能成為驅動 DeFi 與 RWA 的關鍵 Web3 基礎設施。",
       "image": "https://lmybtc.github.io/assets/images/og-chainlink.jpg",
       "author": {
         "@type": "Organization",
@@ -54,9 +55,16 @@
     </header>
 
     <main>
-        <article class="article-container">
+        <div class="article-layout container">
+            <aside class="toc-sidebar">
+                <nav class="toc">
+                    <h3>文章目錄</h3>
+                    <ul id="toc-list"></ul>
+                </nav>
+            </aside>
+            <article class="article-container">
             <!-- 1. 文章標題與元資訊 -->
-            <h1>Chainlink (LINK) 深度解析：連接區塊鏈與現實世界的橋樑</h1>
+            <h1>Chainlink (LINK) 完整指南：為何它是驅動 DeFi 與 RWA 的 Web3 基礎設施？</h1>
             <p class="article-meta">發布日期：2024年5月22日</p>
 
             <!-- 2. 引言：30秒速讀版 -->
@@ -64,7 +72,7 @@
               <strong>💡 30 秒速讀版：</strong>
               <ul>
                 <li><strong>問題：</strong> 智能合約本身是封閉系統，無法安全地獲取外部世界的真實數據（如天氣、貨幣價格）。</li>
-                <li><strong>解決方案：</strong> Chainlink 作為一個去中心化的「預言機」(Oracle) 網絡，充當了區塊鏈與現實世界數據之間的可信中介。</li>
+                <li><strong>解決方案：</strong> Chainlink 作為一個去中心化的<strong>「預言機」(Oracle)</strong> 網絡，充當了區塊鏈與現實世界數據之間的可信中介。</li>
                 <li><strong>核心功能：</strong> 它不僅提供價格數據，還提供可驗證的隨機數 (VRF)、跨鏈通訊 (CCIP) 等關鍵服務，是 Web3 應用的基礎設施。</li>
                 <li><strong>為何重要：</strong> 沒有像 Chainlink 這樣的預言機，DeFi、鏈上遊戲、動態 NFT 等應用都無法實現。</li>
               </ul>
@@ -72,7 +80,9 @@
 
             <!-- 3. 章節：背景介紹 -->
             <h2>為什麼智能合約需要「預言機」？</h2>
-            <p>[此處撰寫背景介紹，解釋智能合約的「確定性」原則，以及為何直接從外部 API 獲取數據會破壞這種確定性，從而引出預言機問題的必要性。]</p>
+            <p>智能合約的強大之處在於其<strong>確定性 (Determinism)</strong>。這意味著在給定相同的輸入時，合約在區塊鏈上的每一次執行都必須產生完全相同的結果。這也是所有節點能夠達成共識的基礎。</p>
+            <p>然而，這也創造了一個悖論：如果智能合約直接從外部網站（例如交易所 API）獲取數據，那麼這個數據在不同時間、不同網路環境下都可能不同。這會破壞確定性，導致共識失敗。因此，智能合約就像被關在一個無法與外界溝通的<strong>「數位沙盒」</strong>裡。</p>
+            <p><strong>預言機 (Oracle)</strong> 就是為了解決這個問題而生的。它不像是神話中預測未來的先知，更像是一個可信的「數據公證人」，負責將外部世界的真實數據安全、可靠地「餵」給智能合約，同時不破壞區塊鏈的共識規則。</p>
 
             <!-- 4. 章節：核心技術解析 (使用資訊卡片) -->
             <h2>Chainlink 的核心服務解析</h2>
@@ -93,15 +103,52 @@
                 <p class="info-card-desc">允許不同區塊鏈之間的智能合約互相發送訊息和轉移價值，是實現「萬鏈互聯」願景的關鍵。</p>
               </div>
             </div>
+            <div class="alert alert-tech">
+              <strong>⚙️ 技術重點：</strong> Chainlink 的去中心化架構是其安全性的核心。它不僅從多個數據源聚合信息，還通過多個獨立的節點來傳遞這些信息，有效防止了單點故障或惡意攻擊。
+            </div>
 
-            <!-- 5. 章節：風險與挑戰 -->
+            <!-- 5. 章節：競爭格局 -->
+            <h2>競爭格局：Chainlink vs. Pyth</h2>
+            <p>雖然 Chainlink 是市場的絕對龍頭，但新興的競爭者如 Pyth Network 也在快速崛起。它們採用了不同的技術路徑來解決預言機問題。</p>
+            <div class="comparison-cards">
+              <div class="comparison-card">
+                <div class="comparison-card-header">
+                  <span class="comparison-card-icon">🔗</span>
+                  <h4 class="comparison-card-title">Chainlink (請求/響應模型)</h4>
+                </div>
+                <p class="comparison-card-desc">當需要數據時，智能合約主動向 Chainlink 網絡發起請求，節點獲取數據後再回傳至鏈上。這種模式如同<strong>「隨叫隨到」的專車服務</strong>，極其可靠和安全，但更新頻率相對較低。</p>
+              </div>
+              <div class="comparison-card">
+                <div class="comparison-card-header">
+                  <span class="comparison-card-icon">🐍</span>
+                  <h4 class="comparison-card-title">Pyth (推送模型)</h4>
+                </div>
+                <p class="comparison-card-desc">數據提供者（如交易所）持續將價格數據「推送」到鏈下，用戶在需要時自行提取並提交至鏈上。這種模式<strong>更新速度極快</strong>，適合高頻交易，但對數據使用者的要求更高。</p>
+              </div>
+            </div>
+
+            <!-- 6. 章節：代幣經濟學 -->
+            <h2>LINK 代幣經濟學概覽</h2>
+            <p>LINK 代幣是 Chainlink 生態系統的命脈，其核心價值在於驅動整個去中心化網絡的運作。了解其分配結構有助於評估項目的長期發展潛力。</p>
+            <table class="data-table">
+              <thead>
+                <tr><th>分配對象</th><th>比例</th><th>用途說明</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>節點運營商與生態獎勵</td><td>35%</td><td>用於激勵提供準確數據的節點，並資助生態內的開發者。</td></tr>
+                <tr><td>團隊與早期貢獻者</td><td>30%</td><td>獎勵創始團隊和早期開發人員的貢獻。</td></tr>
+                <tr><td>公開銷售</td><td>35%</td><td>在 2017 年的 ICO 中向公眾出售，為項目提供初始資金。</td></tr>
+              </tbody>
+            </table>
+
+            <!-- 7. 章節：風險與挑戰 -->
             <h2>風險與挑戰</h2>
-            <p>[此處說明投資或使用 Chainlink 時需要注意的潛在風險，例如節點中心化問題、代幣經濟學的爭議、以及來自其他預言機專案（如 Pyth, API3）的競爭。]</p>
+            <p>儘管 Chainlink 地位穩固，但仍面臨一些挑戰。首先，部分數據源的節點運營商相對集中，存在潛在的<strong>中心化風險</strong>。其次，LINK 代幣的價值捕獲機制（主要依賴質押 Staking 2.0 的成功）仍在發展中。最後，來自 Pyth、API3 等新興預言機專案的競爭不容忽視，它們在特定領域可能提供更具成本效益或更高性能的方案。</p>
             <div class="alert alert-warning">
               <strong>⚠️ 風險提示：</strong> 雖然 Chainlink 是市場龍頭，但預言機賽道的競爭依然激烈。投資者應關注其技術更新、合作夥伴關係以及代幣質押的發展。
             </div>
 
-            <!-- 6. 章節：常見問題 (FAQ) -->
+            <!-- 8. 章節：常見問題 (FAQ) -->
             <h2>關於 Chainlink 的常見問題 (FAQ)</h2>
             <div class="faq-item">
               <h3>Q: LINK 代幣的用途是什麼？</h3>
@@ -112,11 +159,22 @@
               <p>A: Chainlink 的主要優勢在於其龐大的網絡效應、經過市場長期驗證的安全性以及全面的服務套件（不僅是價格數據）。然而，新興的競爭對手在某些特定領域（如高頻更新）可能提供不同的解決方案。</p>
             </div>
 
-            <!-- 7. 結尾模組：免責聲明 -->
+            <!-- 9. 結尾模組：相關主題 -->
+            <section class="related-topics">
+                <h2>相關主題</h2>
+                <div class="post-grid">
+                    <!-- 此處應放置 2-3 個相關文章的連結卡片 -->
+                    <article class="post-card"><a href="layer-2-solutions.html"><div class="post-image" style="background-color: #1E2D3D;"></div><div class="post-content"><span class="post-category">Layer 2</span><h3>Layer 2 解決方案：擴展以太坊的未來</h3></div></a></article>
+                    <article class="post-card"><a href="#"><div class="post-image" style="background-color: #2C2A3E;"></div><div class="post-content"><span class="post-category">DeFi</span><h3>DeFi 借貸協議剖析：風險與機遇</h3></div></a></article>
+                </div>
+            </section>
+
+            <!-- 10. 結尾模組：免責聲明 -->
             <section class="disclaimer">
               <p><strong>免責聲明：</strong> 本文內容僅供參考，不構成任何投資建議。加密貨幣市場風險極高，投資前請務必進行獨立研究並諮詢專業人士。</p>
             </section>
         </article>
+    </div>
     </main>
 
     <footer class="site-footer">
@@ -125,142 +183,28 @@
         </div>
     </footer>
 
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const tocList = document.getElementById('toc-list');
+        const article = document.querySelector('.article-container');
+        if (!tocList || !article) {
+            return;
+        }
+
+        const headings = article.querySelectorAll('h2');
+        let tocHTML = '';
+
+        headings.forEach((heading, index) => {
+            const id = 'toc-heading-' + index;
+            heading.setAttribute('id', id);
+            
+            const listItem = `<li><a href="#${id}">${heading.textContent}</a></li>`;
+            tocHTML += listItem;
+        });
+
+        tocList.innerHTML = tocHTML;
+    });
+    </script>
+
 </body>
 </html>
-
-```
-
-### 2. 建立 `assets/css/article.css`
-
-這份新的 CSS 檔案將為您的文章頁面提供獨特的樣式，使其更具可讀性和專業感。
-
-```diff
---- /dev/null
-+++ b/c:\Users\G1\00.coding workspace\lmyBTC_Blog\lmyBTC.github.io\assets\css\article.css
-@@ -0,0 +1,123 @@
-+/**
-+ * Styles for individual article pages
-+ */
-+
-+/* --- Article Container & Meta --- */
-+.article-container {
-+    max-width: 800px;
-+    margin: 60px auto;
-+    padding: 0 20px;
-+}
-+
-+.article-container h1 {
-+    font-size: 2.8rem;
-+    margin-bottom: 0.5rem;
-+}
-+
-+.article-container h2 {
-+    font-size: 2rem;
-+    margin-top: 3rem;
-+    margin-bottom: 1.5rem;
-+    border-bottom: 1px solid var(--border-color);
-+    padding-bottom: 0.5rem;
-+}
-+
-+.article-meta {
-+    color: var(--text-secondary);
-+    margin-bottom: 2.5rem;
-+}
-+
-+/* --- Alert Boxes --- */
-+.alert {
-+    padding: 1.5rem;
-+    margin: 2rem 0;
-+    border-radius: 8px;
-+    border: 1px solid;
-+}
-+
-+.alert strong {
-+    display: block;
-+    margin-bottom: 0.5rem;
-+}
-+
-+.alert ul {
-+    margin: 0;
-+    padding-left: 20px;
-+}
-+
-+.alert-tip {
-+    background-color: rgba(0, 170, 255, 0.05);
-+    border-color: rgba(0, 170, 255, 0.3);
-+    color: var(--text-primary);
-+}
-+
-+.alert-warning {
-+    background-color: rgba(255, 77, 77, 0.05);
-+    border-color: rgba(255, 77, 77, 0.3);
-+}
-+
-+/* --- Info Cards --- */
-+.info-cards {
-+    display: grid;
-+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-+    gap: 20px;
-+    margin: 2rem 0;
-+}
-+
-+.info-card {
-+    background-color: var(--secondary-bg);
-+    padding: 20px;
-+    border-radius: 8px;
-+    border: 1px solid var(--border-color);
-+}
-+
-+.info-card-icon {
-+    font-size: 1.5rem;
-+    display: block;
-+    margin-bottom: 1rem;
-+}
-+
-+.info-card-title {
-+    font-size: 1.2rem;
-+    margin-bottom: 0.5rem;
-+}
-+
-+.info-card-desc {
-+    color: var(--text-secondary);
-+    font-size: 0.9rem;
-+    line-height: 1.5;
-+}
-+
-+/* --- FAQ Section --- */
-+.faq-item {
-+    margin-bottom: 1.5rem;
-+}
-+
-+.faq-item h3 {
-+    font-size: 1.2rem;
-+    margin-bottom: 0.5rem;
-+}
-+
-+.faq-item p {
-+    color: var(--text-secondary);
-+    border-left: 3px solid var(--border-color);
-+    padding-left: 1rem;
-+    margin: 0;
-+}
-+
-+/* --- Disclaimer --- */
-+.disclaimer {
-+    margin-top: 4rem;
-+    padding: 1rem;
-+    font-size: 0.9rem;
-+    color: var(--text-secondary);
-+    background-color: var(--secondary-bg);
-+    border-radius: 8px;
-+    text-align: center;
-+}
-
-```
-
-現在，您可以開始在 `chainlink-oracle-deep-dive.html` 中填充更詳細的內容了。完成後，別忘了將這篇文章的卡片加到 `post/archive.html`，並更新 `sitemap.xml` 喔！
-
-<!--
-[PROMPT_SUGGESTION]請幫我將這篇新的 Chainlink 文章加入到 `post/archive.html` 和 `sitemap.xml` 中。[/PROMPT_SUGGESTION]
-[PROMPT_SUGGESTION]請幫我建立一個 `post/about.html` 頁面，並套用目前的網站風格。[/PROMPT_SUGGESTION]
--->

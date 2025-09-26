@@ -1,21 +1,16 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>文章彙整 | CryptoPulse</title>
-    <meta name="description" content="探索 LMY's Crypto Blog 的所有文章。從比特幣減半、Layer 2 解決方案到 DeFi，深入了解加密貨幣市場的最新動態與技術解析。" />
-    <meta name="keywords" content="文章彙整, 部落格, 比特幣, 加密貨幣, Layer 2, DeFi, 市場分析" />
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>所有文章 | LMY's Crypto Blog</title>
+    <meta name="description" content="探索所有關於加密貨幣、區塊鏈、DeFi的深度分析文章。">
+    <meta name="google-site-verification" content="F1sAja4V6KTk17SiojYOS8UF1GP9-hu8TXI8iVKQ27Y" />
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="../assets/css/archive.css">
+</head>
+<body>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
-    <link rel="shortcut icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
-
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="../main.css" />
-
-  </head>
-  <body>
     <header class="site-header">
         <div class="container">
             <div class="logo">
@@ -25,62 +20,191 @@
                 <ul>
                     <li><a href="../index.html">首頁</a></li>
                     <li><a href="archive.html">所有文章</a></li>
-                    <li><a href="#">關於我</a></li>
+                    <li><a href="../about.html">關於我</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- 主要內容區域 -->
-    <main>
-      <section class="featured-posts" style="padding-top: 60px;">
-        <div class="container">
-          <h2 style="font-size: 3rem;">所有文章</h2>
-          <div class="post-grid">
-              <article class="post-card">
-                  <a href="layer-2-solutions.html">
-                      <div class="post-image" style="background-color: #1E2D3D;"></div>
-                      <div class="post-content">
-                          <span class="post-category">Layer 2</span>
-                          <h3>Layer 2 解決方案：擴展以太坊的未來</h3>
-                          <p>隨著以太坊生態的蓬勃發展，Layer 2 解決方案成為了實現高擴展性和低交易費用的關鍵...</p>
-                          <div class="post-meta">2024年9月26日</div>
-                      </div>
-                  </a>
-              </article>
+    <div class="page-container">
+        <aside class="sidebar">
+            <nav class="tree-nav">
+                <h3><a href="#archive-title" style="text-decoration: none; color: inherit;">文章目錄</a></h3>
+                <ul class="tree-view" id="treeView"></ul>
+            </nav>
+        </aside>
 
-              <article class="post-card">
-                  <a href="#">
-                      <div class="post-image" style="background-color: #2C2A3E;"></div>
-                      <div class="post-content">
-                          <span class="post-category">DeFi</span>
-                          <h3>DeFi 借貸協議剖析：風險與機遇</h3>
-                          <p>去中心化金融（DeFi）的借貸市場提供了前所未有的機會，但其中也隱藏著需要警惕的風險...</p>
-                          <div class="post-meta">2024年9月22日</div>
-                      </div>
-                  </a>
-              </article>
+        <main class="main-content">
+            <header class="archive-header">
+                <h1 class="archive-title" id="archive-title">所有文章</h1>
+                <p class="archive-subtitle">這裡彙整了所有的市場分析與技術洞見，希望能幫助您在探索加密貨幣的路上，找到最清晰的方向。</p>
+            </header>
 
-              <article class="post-card">
-                  <a href="#">
-                      <div class="post-image" style="background-color: #3A2F3F;"></div>
-                      <div class="post-content">
-                          <span class="post-category">市場分析</span>
-                          <h3>比特幣減半週期：歷史數據告訴我們什麼？</h3>
-                          <p>回顧過去的比特幣減半事件，我們能從中發現哪些模式，並為未來的市場波動做好準備？...</p>
-                          <div class="post-meta">2024年9月18日</div>
-                      </div>
-                  </a>
-              </article>
-          </div>
-        </div>
-      </section>
-    </main>
+            <div class="filter-controls" id="filter-controls">
+                <div class="filter-tags">
+                    <button class="filter-btn active" data-filter="all">全部</button>
+                    <button class="filter-btn" data-filter="layer-2">Layer 2</button>
+                    <button class="filter-btn" data-filter="infrastructure">基礎設施</button>
+                    <button class="filter-btn" data-filter="analysis">市場分析</button>
+                </div>
+                <select id="sortSelect" class="sort-select">
+                    <option value="modified-desc" selected>依最後更新 (新到舊)</option>
+                    <option value="modified-asc">依最後更新 (舊到新)</option>
+                </select>
+                <input type="text" id="searchInput" class="search-input" placeholder="搜尋關鍵字...">
+            </div>
+
+            <div class="archive-grid">
+                <div class="article-card" id="card-chainlink" data-category="infrastructure" data-published="2024-05-22" data-modified="2024-09-26">
+                    <div class="card-content">
+                        <span class="card-tag">基礎設施</span>
+                        <a href="chainlink-oracle-deep-dive.html" class="card-title-link"><h2 class="card-title">Chainlink (LINK) 完整指南：驅動 DeFi 與 RWA 的 Web3 基礎設施</h2></a>
+                        <p class="card-desc">Chainlink 作為一個去中心化的「預言機」網絡，充當了區塊鏈與現實世界數據之間的可信中介。沒有它，DeFi、鏈上遊戲等都無法實現。</p>
+                        <a href="chainlink-oracle-deep-dive.html" class="card-read-more">閱讀全文 &rarr;</a>
+                    </div>
+                    <div class="card-metadata">
+                        <h4>文章資訊</h4>
+                        <p><strong>關鍵字:</strong> <span>Chainlink, LINK, 預言機, Oracle, 智能合約, DeFi, RWA</span></p>
+                        <p><strong>最後更新:</strong> <span>2024-09-26</span></p>
+                    </div>
+                </div>
+
+                <div class="article-card" id="card-layer2" data-category="layer-2" data-published="2024-08-15" data-modified="2024-09-25">
+                    <div class="card-content">
+                        <span class="card-tag">Layer 2</span>
+                        <a href="layer-2-solutions.html" class="card-title-link"><h2 class="card-title">Layer 2 解決方案：擴展以太坊的未來</h2></a>
+                        <p class="card-desc">隨著以太坊生態的蓬勃發展，Layer 2 解決方案成為了實現高擴展性和低交易費用的關鍵。本文將深入探討各種 L2 技術的優劣。</p>
+                        <a href="layer-2-solutions.html" class="card-read-more">閱讀全文 &rarr;</a>
+                    </div>
+                    <div class="card-metadata">
+                        <h4>文章資訊</h4>
+                        <p><strong>關鍵字:</strong> <span>Layer 2, Rollups, ZK-Rollups, Optimistic Rollups, 擴容</span></p>
+                        <p><strong>最後更新:</strong> <span>2024-09-25</span></p>
+                    </div>
+                </div>
+
+            </div>
+            <div id="no-results">
+                <p>找不到符合條件的文章 😅</p>
+            </div>
+        </main>
+    </div>
 
     <footer class="site-footer">
         <div class="container">
             <p>&copy; 2024 LMY's Crypto Blog. All Rights Reserved.</p>
         </div>
     </footer>
-  </body>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const searchInput = document.getElementById('searchInput');
+        const sortSelect = document.getElementById('sortSelect');
+        const archiveGrid = document.querySelector('.archive-grid');
+        const articleCards = document.querySelectorAll('.article-card');
+        const noResults = document.getElementById('no-results');
+        const treeView = document.getElementById('treeView');
+
+        function generateTreeView() {
+            if (!treeView) return;
+            const categories = {};
+            document.querySelectorAll('.archive-grid .article-card').forEach((card, index) => {
+                const category = card.querySelector('.card-tag').textContent.trim();
+                const title = card.querySelector('.card-title').textContent.trim();
+                const cardId = card.id || `card-${index}`;
+                card.id = cardId;
+
+                if (!categories[category]) {
+                    categories[category] = [];
+                }
+                categories[category].push({ title, id: cardId });
+            });
+
+            let treeHTML = '';
+            for (const category in categories) {
+                treeHTML += `<li class="tree-node"><span class="node-label">${category}</span><ul class="tree-children">`;
+                categories[category].forEach(article => {
+                    treeHTML += `<li class="tree-leaf"><a href="#${article.id}">${article.title}</a></li>`;
+                });
+                treeHTML += `</ul></li>`;
+            }
+            treeView.innerHTML = treeHTML;
+        }
+
+        function attachTreeEvents() {
+            if (!treeView) return;
+            treeView.addEventListener('click', function(e) {
+                if (e.target.classList.contains('node-label')) {
+                    e.target.parentElement.classList.toggle('open');
+                }
+                if (e.target.tagName === 'A') {
+                    e.preventDefault();
+                    const targetId = e.target.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        targetElement.style.transition = 'all 0.3s ease';
+                        targetElement.style.boxShadow = `0 0 0 3px var(--accent-color)`;
+                        setTimeout(() => {
+                            targetElement.style.boxShadow = '';
+                        }, 1500);
+                    }
+                }
+            });
+        }
+
+        function sortAndFilterArticles() {
+            const selectedCategory = document.querySelector('.filter-btn.active').dataset.filter;
+            const searchTerm = searchInput.value.toLowerCase();
+            const sortValue = sortSelect.value;
+
+            let cardsArray = Array.from(articleCards);
+
+            cardsArray.sort((a, b) => {
+                const dateA = new Date(a.dataset[sortValue.split('-')[0]]);
+                const dateB = new Date(b.dataset[sortValue.split('-')[0]]);
+                return sortValue.endsWith('-asc') ? dateA - dateB : dateB - dateA;
+            });
+
+            archiveGrid.innerHTML = '';
+            let visibleCount = 0;
+            cardsArray.forEach(card => {
+                const category = card.dataset.category;
+                const title = card.querySelector('.card-title').textContent.toLowerCase();
+                const desc = card.querySelector('.card-desc').textContent.toLowerCase();
+                const keywords = card.querySelector('.card-metadata span').textContent.toLowerCase();
+
+                const categoryMatch = (selectedCategory === 'all' || category === selectedCategory);
+                const searchMatch = (title.includes(searchTerm) || desc.includes(searchTerm) || keywords.includes(searchTerm));
+
+                if (categoryMatch && searchMatch) {
+                    archiveGrid.appendChild(card);
+                    visibleCount++;
+                }
+            });
+
+            noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+            generateTreeView(); // Regenerate tree view after filtering
+            attachTreeEvents(); // Re-attach events
+        }
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                sortAndFilterArticles();
+            });
+        });
+
+        searchInput.addEventListener('input', sortAndFilterArticles);
+        sortSelect.addEventListener('change', sortAndFilterArticles);
+
+        sortAndFilterArticles();
+        generateTreeView();
+        attachTreeEvents();
+      });
+    </script>
+
+</body>
 </html>

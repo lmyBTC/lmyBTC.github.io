@@ -1,28 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- 首頁 -->
+  
   <url>
-    <loc>https://your-crypto-pulse-domain.xyz/index.html</loc>
-    <lastmod>2024-05-21</lastmod>
+    <loc>https://lmybtc.github.io/index.html</loc>
+    <lastmod>2024-09-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <!-- 文章彙整頁 -->
+  
   <url>
-    <loc>https://your-crypto-pulse-domain.xyz/post/archive.html</loc>
-    <lastmod>2024-05-21</lastmod>
+    <loc>https://lmybtc.github.io/post/archive.html</loc>
+    <lastmod>2024-09-26</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
 
-  <!-- 文章: Layer 2 Solutions -->
   <url>
-    <loc>https://your-crypto-pulse-domain.xyz/post/layer-2-solutions.html</loc>
-    <lastmod>2024-05-21</lastmod>
+    <loc>https://lmybtc.github.io/about.html</loc>
+    <lastmod>2024-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://lmybtc.github.io/post/chainlink-oracle-deep-dive.html</loc>
+    <lastmod>2024-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://lmybtc.github.io/post/layer-2-solutions.html</loc>
+    <lastmod>2024-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
 </urlset>
