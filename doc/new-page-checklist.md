@@ -183,3 +183,40 @@ if (footerContainer && window.DeusFooterComponent) {
 | 根目錄 `/index.html`                 | `src="assets/js/xxx.js"`       |
 | 子目錄 `/post/xxx.html`              | `src="../assets/js/xxx.js"`    |
 | 二級子目錄 `/post/category/xxx.html` | `src="../../assets/js/xxx.js"` |
+
+---
+
+## 📚 專案技術參考
+
+此處記錄專案的技術細節與部署流程，作為維護時的參考。
+
+### 🚀 專案特色
+
+- **現代化設計**：採用深色主題，提供專注的閱讀體驗。
+- **靜態化生成**：純 HTML/CSS/JS，無需複雜後端，易於部署在 GitHub Pages 或任何靜態主機上。
+- **組件化**：頁首 (Header)、頁尾 (Footer) 和分析 (Analytics) 均為可重用組件。
+- **SEO 友好**：內建 JSON-LD 結構化資料和標準 Meta 標籤，優化搜尋引擎排名。
+- **響應式設計**：自動適應桌面、平板和手機裝置。
+
+### 🛠️ 技術堆疊
+
+- **HTML5**
+- **CSS3** (使用 CSS 變數)
+- **JavaScript (ES6)**
+
+### 🏗️ 專案結構
+
+```
+lmyBTC.github.io/
+├── index.html                   # 網站首頁
+├── post/                        # 文章目錄
+├── assets/                      # 靜態資源 (CSS, JS, 圖片)
+├── doc/                         # 專案文件
+├── .github/workflows/deploy.yml # 自動化部署腳本
+├── sitemap.xml                  # 網站地圖
+└── README.md                    # 專案入口
+```
+
+### 自動化部署
+
+本專案已設定 GitHub Actions (`.github/workflows/deploy.yml`)。當 `main` 分支有任何更新時，會自動將網站內容部署到公開的 `lmyBTC/lmyBTC.github.io` 倉庫。

@@ -1,251 +1,87 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CryptoPulse - 你的比特幣與加密貨幣財經部落格</title>
-    <meta name="description" content="CryptoPulse 是一個專注於比特幣與加密貨幣市場分析、新聞和技術洞察的財經部落格。我們提供深入的市場趨勢、投資機會和技術解析。" />
-    <meta name="keywords" content="比特幣, Bitcoin, 加密貨幣, 以太坊, 區塊鏈, 財經, 投資, 分析, Layer 2, Ordinals" />
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
-    <link rel="shortcut icon" type="image/svg+xml" href="assets/images/favicon.svg">
-
-    <!-- Open Graph for Social Media -->
-    <meta property="og:site_name" content="CryptoPulse" />
-    <meta property="og:title" content="CryptoPulse - 你的比特幣與加密貨幣財經部落格" />
-    <meta property="og:description" content="專注於比特幣與加密貨幣市場分析、新聞和技術洞察的財經部落格。" />
-    <meta property="og:image" content="https://your-crypto-pulse-domain.xyz/assets/images/og-image.jpg" />
-    <meta property="og:url" content="https://your-crypto-pulse-domain.xyz/" />
-    <meta property="og:type" content="website" />
-
-    <!-- JSON-LD for WebSite (Site Name in Search Results) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "CryptoPulse",
-      "alternateName": "CryptoPulse - 比特幣與加密貨幣財經部落格",
-      "url": "https://your-crypto-pulse-domain.xyz/"
-    }
-    </script>
-
-    <style>
-        /* --- Reset & Base --- */
-        :root {
-            --primary-color: #3a7dff;
-            --background-color: #0a0c10;
-            --card-background: #121721;
-            --text-color: #e0e0e0;
-            --text-secondary: #8a93a7;
-            --border-color: #2c3448;
-            --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-        }
-        body {
-            font-family: var(--font-family);
-            background-color: var(--background-color);
-            color: var(--text-color);
-            margin: 0;
-            line-height: 1.6;
-        }
-        h1, h2, h3, h4 {
-            color: #ffffff;
-            line-height: 1.3;
-        }
-        a {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* --- Hero Section --- */
-        .hero {
-            text-align: center;
-            padding: 100px 0;
-            background: linear-gradient(180deg, rgba(10, 12, 16, 0) 0%, var(--background-color) 100%), 
-                        radial-gradient(circle at 50% 0%, rgba(58, 125, 255, 0.2), rgba(58, 125, 255, 0) 70%);
-        }
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-        }
-        .hero p {
-            font-size: 1.25rem;
-            color: var(--text-secondary);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* --- Posts Section --- */
-        .posts-section {
-            padding: 40px 0 80px;
-        }
-        .posts-section h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        .posts-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-        }
-        .post-card {
-            background: var(--card-background);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-        .post-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 15px rgba(58, 125, 255, 0.1);
-        }
-        .post-card-img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            background-color: #333;
-        }
-        .post-card-content {
-            padding: 24px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        .post-card-tags {
-            margin-bottom: 12px;
-        }
-        .post-card-tags span {
-            background-color: rgba(58, 125, 255, 0.1);
-            color: var(--primary-color);
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-right: 8px;
-        }
-        .post-card h3 {
-            font-size: 1.4rem;
-            margin: 0 0 12px 0;
-        }
-        .post-card p {
-            color: var(--text-secondary);
-            margin: 0 0 20px 0;
-            flex-grow: 1;
-        }
-        .post-card-footer {
-            display: flex;
-            align-items: center;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-        .post-card-author {
-            font-weight: 600;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMY's Crypto Blog - 加密貨幣與財經趨勢</title>
+    <meta name="description" content="深入探索加密貨幣、區塊鏈技術、DeFi、NFTs 以及最新的市場財經趨勢。">
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <!-- Header Component Container -->
-    <div id="header-component"></div>
 
-    <!-- 主要內容區域 -->
-    <main>
+    <header class="site-header">
         <div class="container">
-            <section class="hero">
-                <h1>探索比特幣的無限可能</h1>
-                <p>從比特幣出發，深入分析、市場洞察與投資策略，都在 CryptoPulse。</p>
-            </section>
-
-            <section class="posts-section">
-                <h2>最新文章</h2>
-                <div class="posts-grid">
-                    <!-- Article Card 1 -->
-                    <a href="post/bitcoin-halving-impact.html" class="post-card">
-                        <img src="https://placehold.co/600x400/0f172a/3a7dff?text=Bitcoin+Halving" alt="比特幣減半" class="post-card-img">
-                        <div class="post-card-content">
-                            <div class="post-card-tags">
-                                <span>Bitcoin</span>
-                                <span>Halving</span>
-                            </div>
-                            <h3>比特幣減半對市場的深遠影響</h3>
-                            <p>深入分析比特幣歷史上的減半事件，探討本次減半可能帶來的市場趨勢與投資機會。</p>
-                            <div class="post-card-footer">
-                                <span class="post-card-author">YCL 烈日千陽</span>&nbsp;•&nbsp;<span>2025-09-20</span>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- Article Card 2 -->
-                    <a href="post/bitcoin-layer2-explained.html" class="post-card">
-                        <img src="https://placehold.co/600x400/0f172a/3a7dff?text=Bitcoin+Layer+2" alt="比特幣 Layer 2" class="post-card-img">
-                        <div class="post-card-content">
-                            <div class="post-card-tags">
-                                <span>Bitcoin</span>
-                                <span>Layer 2</span>
-                            </div>
-                            <h3>比特幣 Layer 2 生態解析：尋找下一個成長引擎</h3>
-                            <p>深入探討 Stacks、Lightning Network 等比特幣第二層解決方案，分析其技術優勢與未來潛力。</p>
-                            <div class="post-card-footer">
-                                <span class="post-card-author">YCL 烈日千陽</span>&nbsp;•&nbsp;<span>2025-09-15</span>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- Article Card 3 -->
-                    <a href="post/bitcoin-ordinals-deep-dive.html" class="post-card">
-                        <img src="https://placehold.co/600x400/0f172a/3a7dff?text=Ordinals" alt="比特幣 Ordinals" class="post-card-img">
-                        <div class="post-card-content">
-                            <div class="post-card-tags">
-                                <span>Bitcoin</span>
-                                <span>Ordinals</span>
-                            </div>
-                            <h3>比特幣 Ordinals 深度解析：NFT 的新篇章？</h3>
-                            <p>從技術原理到市場趨勢，全面了解比特幣 Ordinals 協議如何為 BTC 生態帶來新的活力與爭議。</p>
-                            <div class="post-card-footer">
-                                <span class="post-card-author">YCL 烈日千陽</span>&nbsp;•&nbsp;<span>2025-09-10</span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </section>
+            <div class="logo">
+                <a href="index.html">LMY's Crypto Blog</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">首頁</a></li>
+                    <li><a href="post/archive.html">所有文章</a></li>
+                    <li><a href="#">關於我</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>探索加密貨幣與區塊鏈的未來</h1>
+                <p>深入分析、市場趨勢、投資策略</p>
+                <a href="post/archive.html" class="cta-button">查看最新文章</a>
+            </div>
+        </section>
+
+        <section class="featured-posts">
+            <div class="container">
+                <h2>精選文章</h2>
+                <div class="post-grid">
+                    <article class="post-card">
+                        <a href="post/layer-2-solutions.html">
+                            <div class="post-image" style="background-color: #1E2D3D;"></div>
+                            <div class="post-content">
+                                <span class="post-category">Layer 2</span>
+                                <h3>Layer 2 解決方案：擴展以太坊的未來</h3>
+                                <p>隨著以太坊生態的蓬勃發展，Layer 2 解決方案成為了實現高擴展性和低交易費用的關鍵...</p>
+                                <div class="post-meta">2024年9月26日</div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="post-card">
+                        <a href="#">
+                            <div class="post-image" style="background-color: #2C2A3E;"></div>
+                            <div class="post-content">
+                                <span class="post-category">DeFi</span>
+                                <h3>DeFi 借貸協議剖析：風險與機遇</h3>
+                                <p>去中心化金融（DeFi）的借貸市場提供了前所未有的機會，但其中也隱藏著需要警惕的風險...</p>
+                                <div class="post-meta">2024年9月22日</div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="post-card">
+                        <a href="#">
+                            <div class="post-image" style="background-color: #3A2F3F;"></div>
+                            <div class="post-content">
+                                <span class="post-category">市場分析</span>
+                                <h3>比特幣減半週期：歷史數據告訴我們什麼？</h3>
+                                <p>回顧過去的比特幣減半事件，我們能從中發現哪些模式，並為未來的市場波動做好準備？...</p>
+                                <div class="post-meta">2024年9月18日</div>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Footer Component Container -->
-    <div id="footer-component"></div>
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 LMY's Crypto Blog. All Rights Reserved.</p>
+        </div>
+    </footer>
 
-    <!-- Load Components -->
-    <script src="assets/js/deus-analytics-component.js"></script>
-    <script src="assets/js/deus-header-component.js"></script>
-    <script src="assets/js/deus-footer-component.js"></script>
-
-    <script>
-      // Initialize Components
-      document.addEventListener("DOMContentLoaded", function () {
-        // Initialize Analytics Component
-        if (window.DeusAnalyticsComponent) {
-          new window.DeusAnalyticsComponent().setDebug(false).setEnvironment("production");
-        }
-
-        // Initialize Header Component
-        const headerContainer = document.getElementById("header-component");
-        if (headerContainer && window.DeusHeaderComponent) {
-          new window.DeusHeaderComponent(headerContainer).setDebug(false);
-        }
-
-        // Initialize Footer Component
-        const footerContainer = document.getElementById("footer-component");
-        if (footerContainer && window.DeusFooterComponent) {
-          new window.DeusFooterComponent(footerContainer).setDebug(false);
-        }
-      });
-    </script>
 </body>
 </html>
