@@ -47,7 +47,7 @@ lmyBTC.github.io/
 │   └── *.html          # 所有【文章頁面】都存放在此
 │
 └── doc/
-    └── test/           # 僅供開發時參考，【此資料夾會被 .gitignore 忽略，不會上傳】
+    └── draft/          # 存放文章草稿與參考文稿，【此資料夾會同步至 GitHub】
 
 ```
 
