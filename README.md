@@ -53,10 +53,10 @@ lmyBTC.github.io/
 
 **核心規則：**
 
-1.  **樣式分離**：
-    - `main.css`：定義全站的基礎樣式，如顏色變數、字體、頁首頁尾等。
-    - `assets/css/`：存放**特定頁面**的專屬樣式。例如，`home.css` 只用於 `index.html`，`archive.css` 只用於 `post/archive.html`。
-    - **嚴禁**在 `post/` 或其他非 `assets` 資料夾中存放 CSS 檔案。
+1.  **CSS 存放規則**：
+    - 所有頁面專用的 CSS 檔案都必須存放在 `assets/css` 資料夾中。
+    - 唯一的例外是位於根目錄的 `main.css`，它是全站的基礎樣式。
+    - **嚴禁**在 `post/` 或其他任何非規定位置存放 CSS 檔案。
 
 2.  **內容分離**：
     - **文章**：所有部落格文章的 HTML 檔案都必須存放在 `post/` 資料夾中。
