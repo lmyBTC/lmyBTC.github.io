@@ -20,7 +20,8 @@
             <nav class="main-nav">
                 <ul>
                     <li><a href="index.html">首頁</a></li>
-                    <li><a href="post/archive.html">所有文章</a></li>
+                    <li><a href="post/topic-core.html">核心論述</a></li>
+                    <li><a href="post/archive.html">主題文章</a></li>
                     <li><a href="about.html">關於我</a></li>
                 </ul>
             </nav>
@@ -85,7 +86,7 @@
                     <p class="section-subtitle">最多人關注的加密貨幣領域，了解它們的關鍵技術與市場潛力。</p>
                 </div>
                 <div class="topics-grid">
-                    <a href="post/topic-macro.html" class="topic-card">
+                    <div class="topic-card" data-href="post/topic-macro.html">
                         <div class="topic-header">
                             <h3>總體環境與大型資產 (Macro)</h3>
                             <p>專注於宏觀經濟、金融政策與大型加密資產的連動性，助您在 TradFi 框架下理解市場脈動。</p>
@@ -100,8 +101,8 @@
                             <h4 class="topic-featured-title">精選文章</h4>
                             <a href="post/2025-marco.html" class="topic-featured-link">2025年宏觀展望：數位資產的制度化與偉大重塑</a>
                         </div>
-                    </a>
-                    <a href="post/topic-rwa.html" class="topic-card">
+                    </div>
+                    <div class="topic-card" data-href="post/topic-rwa.html">
                         <div class="topic-header">
                             <h3>真實世界資產 (RWA)</h3>
                             <p>探索房地產、債券等現實資產如何被代幣化，連接傳統金融與 DeFi 的前沿領域。</p>
@@ -114,8 +115,8 @@
                                 <li>Ondo Finance & BlackRock BUIDL</li>
                             </ul>
                         </div>
-                    </a>
-                    <a href="post/topic-tech.html" class="topic-card">
+                    </div>
+                    <div class="topic-card" data-href="post/topic-tech.html">
                         <div class="topic-header">
                             <h3>區塊鏈前沿技術 (TECH)</h3>
                             <p>專注於驅動產業發展的底層技術與創新敘事，幫助您抓住趨勢，發現早期投資機會。</p>
@@ -128,7 +129,7 @@
                                 <li>帳戶抽象 (AA)</li>
                             </ul>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -183,5 +184,22 @@
         </div>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const topicCards = document.querySelectorAll('.topic-card');
+
+            topicCards.forEach(card => {
+                card.addEventListener('click', function (e) {
+                    // 如果點擊的不是連結本身，就跳轉到卡片指定的頁面
+                    if (e.target.tagName.toLowerCase() !== 'a') {
+                        const href = card.getAttribute('data-href');
+                        if (href) {
+                            window.location.href = href;
+                        }
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

@@ -46,8 +46,21 @@
     <link rel="stylesheet" href="../assets/css/article.css" />
   </head>
   <body>
-    <!-- Header Component Container -->
-    <div id="header-component"></div>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">LMY's Crypto Blog</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">首頁</a></li>
+                    <li><a href="topic-core.html">核心論述</a></li>
+                    <li><a href="archive.html">主題文章</a></li>
+                    <li><a href="../about.html">關於我</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <!-- 主要內容區域 -->
     <main>
@@ -136,34 +149,12 @@
       </article>
     </main>
 
-    <!-- Footer Component Container -->
-    <div id="footer-component"></div>
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 LMY's Crypto Blog. All Rights Reserved.</p>
+        </div>
+    </footer>
 
-    <!-- Load Components -->
-    <script src="../assets/js/deus-analytics-component.js"></script>
-    <script src="../assets/js/deus-header-component.js"></script>
-    <script src="../assets/js/deus-footer-component.js"></script>
 
-    <script>
-      // Initialize Components
-      document.addEventListener("DOMContentLoaded", function () {
-        // Initialize Analytics Component
-        if (window.DeusAnalyticsComponent) {
-          new window.DeusAnalyticsComponent().setDebug(false).setEnvironment("production");
-        }
-
-        // Initialize Header Component
-        const headerContainer = document.getElementById("header-component");
-        if (headerContainer && window.DeusHeaderComponent) {
-          new window.DeusHeaderComponent(headerContainer).setDebug(false);
-        }
-
-        // Initialize Footer Component
-        const footerContainer = document.getElementById("footer-component");
-        if (footerContainer && window.DeusFooterComponent) {
-          new window.DeusFooterComponent(footerContainer).setDebug(false);
-        }
-      });
-    </script>
   </body>
 </html>

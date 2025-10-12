@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO 與 Metadata -->
+    <title>核心系列：以太坊與山寨幣 (ALT) | LMY's Crypto Blog</title>
+    <meta name="description" content="深入了解以太坊的智能合約功能，並探索山寨幣 (Altcoins) 的世界，尋找下一個投資機會。">
+    <meta name="keywords" content="以太坊, Ethereum, ETH, 山寨幣, Altcoin, 智能合約, DeFi, NFT">
+    <meta name="google-site-verification" content="F1sAja4V6KTk17SiojYOS8UF1GP9-hu8TXI8iVKQ27Y" />
+
+    <!-- JSON-LD 結構化資料 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://lmybtc.github.io/post/core-eth-alt.html"
+      },
+      "headline": "核心系列：以太坊與山寨幣 (ALT) | LMY's Crypto Blog",
+      "description": "深入了解以太坊的智能合約功能，並探索山寨幣 (Altcoins) 的世界，尋找下一個投資機會。",
+      "author": {
+        "@type": "Organization",
+        "name": "LMY's Crypto Blog",
+        "url": "https://lmybtc.github.io/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "LMY's Crypto Blog"
+      },
+      "datePublished": "2025-10-12",
+      "dateModified": "2025-10-12"
+    }
+    </script>
+
+    <!-- 樣式檔案 -->
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="../assets/css/article.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">LMY's Crypto Blog</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">首頁</a></li>
+                    <li><a href="topic-core.html">核心論述</a></li>
+                    <li><a href="archive.html">主題文章</a></li>
+                    <li><a href="../about.html">關於我</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="article-layout container">
+            <aside class="toc-sidebar">
+                <nav class="toc">
+                    <h3>文章目錄</h3>
+                    <ul id="toc-list"></ul>
+                </nav>
+            </aside>
+            <article class="article-container">
+                <h1>核心系列：以太坊與山寨幣 (ALT)</h1>
+                <p class="article-meta">發布日期：2025-10-12</p>
+
+                <!-- ▼ 文章內容開始 ▼ -->
+
+                <div class="alert alert-tip">
+                  <strong>💡 30 秒速讀版：</strong>
+                  <ul>
+                    <li>重點一：以太坊是智能合約的先驅。</li>
+                    <li>重點二：山寨幣是比特幣以外的所有加密貨幣。</li>
+                  </ul>
+                </div>
+
+                <h2 id="toc-heading-0">第一章節標題</h2>
+                <p>這是關於以太坊與山寨幣的第一章節內容...</p>
+
+                <h2 id="toc-heading-1">第二章節標題</h2>
+                <p>這是關於以太坊與山寨幣的第二章節內容...</p>
+
+                <!-- ▲ 文章內容結束 ▲ -->
+
+            </article>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 LMY's Crypto Blog. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 目錄生成腳本 -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const tocList = document.getElementById('toc-list');
+        const article = document.querySelector('.article-container');
+        if (!tocList || !article) return;
+
+        const headings = article.querySelectorAll('h2');
+        headings.forEach((heading, index) => {
+            const id = heading.id || 'toc-heading-' + index;
+            heading.id = id;
+            const listItem = `<li><a href="#${id}">${heading.textContent}</a></li>`;
+            tocList.innerHTML += listItem;
+        });
+    });
+    </script>
+
+</body>
+</html>
