@@ -1,0 +1,41 @@
+# .github/workflows/deploy.yml
+name: Deploy Hugo Site
+
+on:
+  # Trigger the workflow on push events to the main branch
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          submodules: true  # Fetch Hugo themes (if using submodules)
+
+      # Setup Hugo
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+
+      # Build the Hugo site
+      - name: Build
+        run: hugo --minify
+
+      # Deploy the built site to the lmyBTC.github.io repository
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          # This is the deploy key you need to set up
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          # The repository to deploy to
+          external_repository: lmyBTC/lmyBTC.github.io
+          # The branch to deploy to
+          publish_branch: main
+          # The directory to deploy from
+          publish_dir: ./public
