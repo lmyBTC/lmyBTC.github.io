@@ -3,196 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>所有文章 | LMY's Crypto Blog</title>
+    <title>主題文章 | Crypto Mastermind</title>
     <meta name="description" content="探索所有關於加密貨幣、區塊鏈、DeFi的深度分析文章。">
     <meta name="google-site-verification" content="F1sAja4V6KTk17SiojYOS8UF1GP9-hu8TXI8iVKQ27Y" />
-    <link rel="stylesheet" href="../main.css">
-    <link rel="stylesheet" href="../assets/css/archive.css">
-</head>
-<body>
 
-    <header class="site-header">
-        <div class="container">
-            <div class="logo">
-                <a href="../index.html">LMY's Crypto Blog</a>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="../assets/css/custom.css">
+</head>
+<body class="bg-slate-100 text-slate-800">
+
+    <!-- Header -->
+    <header class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="../index.html" class="text-2xl font-bold text-slate-900">Crypto Mastermind</a>
+                </div>
+                <nav class="hidden md:block">
+                    <ul class="flex items-center space-x-8 text-sm font-semibold text-slate-600">
+                        <li><a href="../index.html" class="hover:text-orange-500 transition-colors">首頁</a></li>
+                        <li><a href="topic-core.html" class="hover:text-orange-500 transition-colors">核心論述</a></li>
+                        <li><a href="archive.html" class="hover:text-orange-500 transition-colors">主題文章</a></li>
+                        <li><a href="../about.html" class="hover:text-orange-500 transition-colors">關於我</a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="../index.html">首頁</a></li>
-                    <li><a href="topic-core.html">核心論述</a></li>
-                    <li><a href="archive.html">主題文章</a></li>
-                    <li><a href="../about.html">關於我</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
 
-    <div class="page-container">
-        <aside class="sidebar">
-            <nav class="tree-nav">
-                <h3><a href="#archive-title" style="text-decoration: none; color: inherit;">文章目錄</a></h3>
-                <ul class="tree-view" id="treeView"></ul>
-            </nav>
-        </aside>
-
-        <main class="main-content">
-            <header class="archive-header">
-                <h1 class="archive-title" id="archive-title">所有文章</h1>
-                <p class="archive-subtitle">這裡彙整了所有的市場分析與技術洞見，希望能幫助您在探索加密貨幣的路上，找到最清晰的方向。</p>
-            </header>
-
-            <div class="filter-controls" id="filter-controls">
-                <div class="filter-tags">
-                    <button class="filter-btn active" data-filter="all">全部</button>
-                    <button class="filter-btn" data-filter="core">核心系列</button>
-                    <button class="filter-btn" data-filter="macro">總體環境 (Macro)</button>
-                    <button class="filter-btn" data-filter="rwa">真實世界資產 (RWA)</button>
-                    <button class="filter-btn" data-filter="tech">前沿技術 (TECH)</button>
-                </div>
-                <select id="sortSelect" class="sort-select">
-                    <option value="modified-desc" selected>依最後更新 (新到舊)</option>
-                    <option value="modified-asc">依最後更新 (舊到新)</option>
-                </select>
-                <input type="text" id="searchInput" class="search-input" placeholder="搜尋關鍵字...">
+    <main class="py-12 sm:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Page Header -->
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 leading-tight font-noto">主題文章</h1>
+                <p class="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">
+                    這裡彙整了所有的市場分析與技術洞見，希望能幫助您在探索加密貨幣的路上，找到最清晰的方向。
+                </p>
             </div>
 
-            <div class="archive-grid">
-                <div class="article-card" id="card-core-eth-alt" data-category="core" data-published="2025-10-12" data-modified="2025-10-12">
-                    <div class="card-content">
-                        <span class="card-tag">核心系列</span>
-                        <a href="core-eth-alt.html" class="card-title-link"><h2 class="card-title">核心系列：以太坊與山寨幣 (ALT)</h2></a>
-                        <p class="card-desc">深入了解以太坊的智能合約功能，並探索山寨幣 (Altcoins) 的世界，尋找下一個投資機會。</p>
-                        <a href="core-eth-alt.html" class="card-read-more">閱讀全文 &rarr;</a>
-                    </div>
-                    <div class="card-metadata">
-                        <h4>文章資訊</h4>
-                        <p><strong>關鍵字:</strong> <span>以太坊, Ethereum, ETH, 山寨幣, Altcoin, 智能合約, DeFi, NFT</span></p>
-                        <p><strong>最後更新:</strong> <span>2025-10-12</span></p>
-                    </div>
+            <!-- Filter Controls -->
+            <div id="filter-controls" class="mb-12 p-4 bg-white/80 rounded-2xl shadow-md backdrop-blur-md flex flex-col md:flex-row items-center gap-4">
+                <div class="filter-tags flex flex-wrap gap-2 flex-grow">
+                    <button class="filter-btn px-4 py-2 text-sm font-semibold rounded-full transition-colors active" data-filter="all">全部</button>
+                    <button class="filter-btn px-4 py-2 text-sm font-semibold rounded-full transition-colors" data-filter="core">核心論述</button>
+                    <button class="filter-btn px-4 py-2 text-sm font-semibold rounded-full transition-colors" data-filter="analysis">市場分析</button>
+                    <button class="filter-btn px-4 py-2 text-sm font-semibold rounded-full transition-colors" data-filter="tech">前沿技術</button>
                 </div>
-                <div class="article-card" id="card-core-btc" data-category="core" data-published="2025-10-12" data-modified="2025-10-12">
-                    <div class="card-content">
-                        <span class="card-tag">核心系列</span>
-                        <a href="core-btc.html" class="card-title-link"><h2 class="card-title">核心系列：比特幣</h2></a>
-                        <p class="card-desc">深入探討比特幣的核心技術、歷史與未來發展。</p>
-                        <a href="core-btc.html" class="card-read-more">閱讀全文 &rarr;</a>
-                    </div>
-                    <div class="card-metadata">
-                        <h4>文章資訊</h4>
-                        <p><strong>關鍵字:</strong> <span>比特幣, Bitcoin, BTC, 核心系列, 加密貨幣</span></p>
-                        <p><strong>最後更新:</strong> <span>2025-10-12</span></p>
-                    </div>
+                <div class="flex items-center gap-4 w-full md:w-auto">
+                    <select id="sortSelect" class="w-full md:w-auto bg-white border border-slate-300 rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        <option value="modified-desc" selected>依最後更新 (新到舊)</option>
+                        <option value="modified-asc">依最後更新 (舊到新)</option>
+                    </select>
+                    <input type="text" id="searchInput" class="w-full md:w-auto bg-white border border-slate-300 rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500" placeholder="搜尋關鍵字...">
                 </div>
-                <div class="article-card" id="card-2025-marco" data-category="analysis" data-published="2024-09-27" data-modified="2024-09-27">
-                    <div class="card-content">
-                        <span class="card-tag">市場分析</span>
-                        <a href="2025-marco.html" class="card-title-link"><h2 class="card-title">2025年宏觀展望：數位資產的制度化與偉大重塑</h2></a>
-                        <p class="card-desc">深入解析2025年數位資產領域的結構性轉型，從監管重塑、機構整合到技術演進，剖析一個以「受監管的去中心化」為核心的新範式。</p>
-                        <a href="2025-marco.html" class="card-read-more">閱讀全文 &rarr;</a>
-                    </div>
-                    <div class="card-metadata">
-                        <h4>文章資訊</h4>
-                        <p><strong>關鍵字:</strong> <span>宏觀經濟, 2025, 監管, ETF, 穩定幣, RWA</span></p>
-                        <p><strong>最後更新:</strong> <span>2024-09-27</span></p>
-                    </div>
-                </div>
-                <div class="article-card" id="card-chainlink" data-category="tech" data-published="2024-05-22" data-modified="2024-09-26">
-                    <div class="card-content">
-                        <span class="card-tag">前沿技術</span>
-                        <a href="chainlink.html" class="card-title-link"><h2 class="card-title">Chainlink (LINK) 完整指南：驅動 DeFi 與 RWA 的 Web3 基礎設施</h2></a>
-                        <p class="card-desc">Chainlink 作為一個去中心化的「預言機」網絡，充當了區塊鏈與現實世界數據之間的可信中介。沒有它，DeFi、鏈上遊戲等都無法實現。</p>
-                        <a href="chainlink.html" class="card-read-more">閱讀全文 &rarr;</a>
-                    </div>
-                    <div class="card-metadata">
-                        <h4>文章資訊</h4>
-                        <p><strong>關鍵字:</strong> <span>Chainlink, LINK, 預言機, Oracle, 智能合約, DeFi, RWA</span></p>
-                        <p><strong>最後更新:</strong> <span>2024-09-26</span></p>
-                    </div>
-                </div>
-
-                <div class="article-card" id="card-layer2" data-category="tech" data-published="2024-08-15" data-modified="2024-09-25">
-                    <div class="card-content">
-                        <span class="card-tag">前沿技術</span>
-                        <a href="layer-2.html"><h2 class="card-title">Layer 2 解決方案：擴展以太坊的未來</h2></a>
-                        <p class="card-desc">隨著以太坊生態的蓬勃發展，Layer 2 解決方案成為了實現高擴展性和低交易費用的關鍵。本文將深入探討各種 L2 技術的優劣。</p>
-                        <a href="layer-2.html" class="card-read-more">閱讀全文 &rarr;</a>
-                    </div>
-                    <div class="card-metadata">
-                        <h4>文章資訊</h4>
-                        <p><strong>關鍵字:</strong> <span>Layer 2, Rollups, ZK-Rollups, Optimistic Rollups, 擴容</span></p>
-                        <p><strong>最後更新:</strong> <span>2024-09-25</span></p>
-                    </div>
-                </div>
-
             </div>
-            <div id="no-results">
+
+            <!-- Articles Grid -->
+            <div class="archive-grid grid grid-cols-1 gap-8">
+                <!-- JS will populate this -->
+            </div>
+            <div id="no-results" class="text-center py-16 text-slate-500" style="display: none;">
                 <p>找不到符合條件的文章 😅</p>
             </div>
-        </main>
-    </div>
+        </div>
+    </main>
 
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2024 LMY's Crypto Blog. All Rights Reserved.</p>
+    <footer class="bg-slate-900 text-slate-400 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-sm">
+            <p>&copy; 2025 Crypto Mastermind. All Rights Reserved.</p>
+            <p class="mt-2">免責聲明：本站內容僅供資訊參考，不構成任何投資建議。</p>
         </div>
     </footer>
 
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function () {
+        const articles = [
+            {
+                id: 'card-core-eth-alt',
+                category: 'core',
+                published: '2025-10-12',
+                modified: '2025-10-12',
+                tag: '核心論述',
+                tagColor: 'text-violet-500',
+                title: '核心系列：以太坊與山寨幣 (ALT)',
+                desc: '深入了解以太坊的智能合約功能，並探索山寨幣 (Altcoins) 的世界，尋找下一個投資機會。',
+                link: 'core-eth-alt.html',
+                keywords: '以太坊, Ethereum, ETH, 山寨幣, Altcoin, 智能合約, DeFi, NFT'
+            },
+            {
+                id: 'card-core-btc',
+                category: 'core',
+                published: '2025-10-12',
+                modified: '2025-10-12',
+                tag: '核心論述',
+                tagColor: 'text-orange-500',
+                title: '核心系列：比特幣',
+                desc: '深入探討比特幣的核心技術、歷史與未來發展。',
+                link: 'core-btc.html',
+                keywords: '比特幣, Bitcoin, BTC, 核心系列, 加密貨幣'
+            },
+            {
+                id: 'card-2025-marco',
+                category: 'analysis',
+                published: '2024-09-27',
+                modified: '2024-09-27',
+                tag: '市場分析',
+                tagColor: 'text-blue-500',
+                title: '2025年宏觀展望：數位資產的制度化與偉大重塑',
+                desc: '深入解析2025年數位資產領域的結構性轉型，從監管重塑、機構整合到技術演進，剖析一個以「受監管的去中心化」為核心的新範式。',
+                link: '2025-marco.html',
+                keywords: '宏觀經濟, 2025, 監管, ETF, 穩定幣, RWA'
+            },
+            {
+                id: 'card-chainlink',
+                category: 'tech',
+                published: '2024-05-22',
+                modified: '2024-09-26',
+                tag: '前沿技術',
+                tagColor: 'text-green-500',
+                title: 'Chainlink (LINK) 完整指南：驅動 DeFi 與 RWA 的 Web3 基礎設施',
+                desc: 'Chainlink 作為一個去中心化的「預言機」網絡，充當了區塊鏈與現實世界數據之間的可信中介。沒有它，DeFi、鏈上遊戲等都無法實現。',
+                link: 'chainlink.html',
+                keywords: 'Chainlink, LINK, 預言機, Oracle, 智能合約, DeFi, RWA'
+            },
+            {
+                id: 'card-layer2',
+                category: 'tech',
+                published: '2024-08-15',
+                modified: '2024-09-25',
+                tag: '前沿技術',
+                tagColor: 'text-green-500',
+                title: 'Layer 2 解決方案：擴展以太坊的未來',
+                desc: '隨著以太坊生態的蓬勃發展，Layer 2 解決方案成為了實現高擴展性和低交易費用的關鍵。本文將深入探討各種 L2 技術的優劣。',
+                link: 'layer-2.html',
+                keywords: 'Layer 2, Rollups, ZK-Rollups, Optimistic Rollups, 擴容'
+            }
+        ];
+
         const filterButtons = document.querySelectorAll('.filter-btn');
         const searchInput = document.getElementById('searchInput');
         const sortSelect = document.getElementById('sortSelect');
         const archiveGrid = document.querySelector('.archive-grid');
-        const articleCards = document.querySelectorAll('.article-card');
         const noResults = document.getElementById('no-results');
-        const treeView = document.getElementById('treeView');
 
-        function generateTreeView() {
-            if (!treeView) return;
-            const categories = {};
-            document.querySelectorAll('.archive-grid .article-card').forEach((card, index) => {
-                const category = card.querySelector('.card-tag').textContent.trim();
-                const title = card.querySelector('.card-title').textContent.trim();
-                const cardId = card.id || `card-${index}`;
-                card.id = cardId;
-
-                if (!categories[category]) {
-                    categories[category] = [];
-                }
-                categories[category].push({ title, id: cardId });
-            });
-
-            let treeHTML = '';
-            for (const category in categories) {
-                treeHTML += `<li class="tree-node"><span class="node-label">${category}</span><ul class="tree-children">`;
-                categories[category].forEach(article => {
-                    treeHTML += `<li class="tree-leaf"><a href="#${article.id}">${article.title}</a></li>`;
-                });
-                treeHTML += `</ul></li>`;
-            }
-            treeView.innerHTML = treeHTML;
+        function createArticleCard(article) {
+            return `
+                <div class="article-card bg-white rounded-2xl shadow-lg overflow-hidden transition-transform duration-300 hover:-translate-y-1 group" data-category="${article.category}" data-published="${article.published}" data-modified="${article.modified}">
+                    <a href="${article.link}" class="block p-8">
+                        <div class="text-sm font-semibold ${article.tagColor} uppercase mb-2">${article.tag}</div>
+                        <h2 class="card-title text-2xl font-bold text-slate-900 font-noto group-hover:text-orange-600 transition-colors">${article.title}</h2>
+                        <p class="card-desc mt-3 text-slate-600 text-sm leading-relaxed">${article.desc}</p>
+                        <div class="card-metadata mt-4 text-xs text-slate-500">
+                            <p><strong>關鍵字:</strong> <span>${article.keywords}</span></p>
+                            <p><strong>最後更新:</strong> <span>${article.modified}</span></p>
+                        </div>
+                    </a>
+                </div>
+            `;
         }
 
-        function attachTreeEvents() {
-            if (!treeView) return;
-            treeView.addEventListener('click', function(e) {
-                if (e.target.classList.contains('node-label')) {
-                    e.target.parentElement.classList.toggle('open');
-                }
-                if (e.target.tagName === 'A') {
-                    e.preventDefault();
-                    const targetId = e.target.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        targetElement.style.transition = 'all 0.3s ease';
-                        targetElement.style.boxShadow = `0 0 0 3px var(--accent-color)`;
-                        setTimeout(() => {
-                            targetElement.style.boxShadow = '';
-                        }, 1500);
-                    }
-                }
-            });
+        function renderArticles(filteredArticles) {
+            archiveGrid.innerHTML = filteredArticles.map(createArticleCard).join('');
+            noResults.style.display = filteredArticles.length === 0 ? 'block' : 'none';
         }
 
         function sortAndFilterArticles() {
@@ -200,40 +181,29 @@
             const searchTerm = searchInput.value.toLowerCase();
             const sortValue = sortSelect.value;
 
-            let cardsArray = Array.from(articleCards);
+            let filteredArticles = articles.filter(article => {
+                const categoryMatch = selectedCategory === 'all' || article.category === selectedCategory;
+                const searchMatch = (
+                    article.title.toLowerCase().includes(searchTerm) ||
+                    article.desc.toLowerCase().includes(searchTerm) ||
+                    article.keywords.toLowerCase().includes(searchTerm)
+                );
+                return categoryMatch && searchMatch;
+            });
 
-            cardsArray.sort((a, b) => {
-                const dateA = new Date(a.dataset[sortValue.split('-')[0]]);
-                const dateB = new Date(b.dataset[sortValue.split('-')[0]]);
+            filteredArticles.sort((a, b) => {
+                const dateA = new Date(a[sortValue.split('-')[0]]);
+                const dateB = new Date(b[sortValue.split('-')[0]]);
                 return sortValue.endsWith('-asc') ? dateA - dateB : dateB - dateA;
             });
 
-            archiveGrid.innerHTML = '';
-            let visibleCount = 0;
-            cardsArray.forEach(card => {
-                const category = card.dataset.category;
-                const title = card.querySelector('.card-title').textContent.toLowerCase();
-                const desc = card.querySelector('.card-desc').textContent.toLowerCase();
-                const keywords = card.querySelector('.card-metadata span').textContent.toLowerCase();
-
-                const categoryMatch = (selectedCategory === 'all' || category === selectedCategory);
-                const searchMatch = (title.includes(searchTerm) || desc.includes(searchTerm) || keywords.includes(searchTerm));
-
-                if (categoryMatch && searchMatch) {
-                    archiveGrid.appendChild(card);
-                    visibleCount++;
-                }
-            });
-
-            noResults.style.display = visibleCount === 0 ? 'block' : 'none';
-            generateTreeView(); // Regenerate tree view after filtering
-            attachTreeEvents(); // Re-attach events
+            renderArticles(filteredArticles);
         }
 
         filterButtons.forEach(button => {
             button.addEventListener('click', () => {
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
+                filterButtons.forEach(btn => btn.classList.remove('active', 'bg-orange-500', 'text-white'));
+                button.classList.add('active', 'bg-orange-500', 'text-white');
                 sortAndFilterArticles();
             });
         });
@@ -241,11 +211,13 @@
         searchInput.addEventListener('input', sortAndFilterArticles);
         sortSelect.addEventListener('change', sortAndFilterArticles);
 
+        // Initial render
         sortAndFilterArticles();
-        generateTreeView();
-        attachTreeEvents();
-      });
+    });
     </script>
-
+    <style>
+        .filter-btn { background-color: #fff; color: #334155; }
+        .filter-btn.active { background-color: #f97316; color: #fff; }
+    </style>
 </body>
 </html>

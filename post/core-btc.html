@@ -4,13 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO 與 Metadata -->
-    <title>比特幣 (Bitcoin) 是什麼？2025年新手必讀：10分鐘搞懂去中心化、區塊鏈等5大核心概念的免費完整指南 | LMY's Crypto Blog</title>
-    <meta name="description" content="本文為您提供2025年最完整的比特幣入門指南。用10分鐘快速理解其背後的區塊鏈技術、去中心化理念、挖礦機制與UTXO模型，解答您對數位黃金的所有疑惑。">
-    <meta name="keywords" content="比特幣, Bitcoin, 加密貨幣, 區塊鏈, 去中心化, 挖礦, 中本聰, UTXO, 數位黃金, CryptoPulse">
+    <!-- SEO 與 Metadata (已根據 V.I.P. + B.R.A.V.E. 框架優化) -->
+    <title>比特幣 (Bitcoin) - 不只是數位黃金？從零搞懂區塊鏈、挖礦與投資風險的終極指南 | Crypto Mastermind</title>
+    <meta name="description" content="想徹底搞懂比特幣？本篇終極指南將從華爾街分析師視角，深度拆解區塊鏈技術、挖礦原理與真實投資風險，助您在加密貨幣市場中做出明智決策。">
+    <meta name="keywords" content="比特幣, Bitcoin, 加密貨幣, 區塊鏈, 去中心化, 挖礦, 中本聰, UTXO, 數位黃金, 投資風險, Crypto Mastermind">
     <meta name="google-site-verification" content="F1sAja4V6KTk17SiojYOS8UF1GP9-hu8TXI8iVKQ27Y" />
 
-    <!-- JSON-LD 結構化資料 -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Typography Plugin -->
+    <script src="https://cdn.tailwindcss.com/3.4.1?plugins=typography"></script>
+
+    <!-- JSON-LD 結構化資料 (已更新) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -19,171 +29,232 @@
         "@type": "WebPage",
         "@id": "https://lmybtc.github.io/post/core-btc.html"
       },
-      "headline": "比特幣 (Bitcoin) 是什麼？2025年新手必讀：10分鐘搞懂去中心化、區塊鏈等5大核心概念的免費完整指南 | LMY's Crypto Blog",
-      "description": "本文為您提供2025年最完整的比特幣入門指南。用10分鐘快速理解其背後的區塊鏈技術、去中心化理念、挖礦機制與UTXO模型，解答您對數位黃金的所有疑惑。",
+      "headline": "比特幣 (Bitcoin) - 不只是數位黃金？從零搞懂區塊鏈、挖礦與投資風險的終極指南 | Crypto Mastermind",
+      "description": "想徹底搞懂比特幣？本篇終極指南將從華爾街分析師視角，深度拆解區塊鏈技術、挖礦原理與真實投資風險，助您在加密貨幣市場中做出明智決策。",
       "author": {
         "@type": "Organization",
-        "name": "LMY's Crypto Blog",
+        "name": "Crypto Mastermind",
         "url": "https://lmybtc.github.io/"
       },
       "publisher": {
         "@type": "Organization",
-        "name": "LMY's Crypto Blog"
-      },
-      "datePublished": "2025-10-12",
-      "dateModified": "2025-10-12"
+        "name": "Crypto Mastermind"
+      }
     }
     </script>
-
-    <!-- 樣式檔案 -->
-    <link rel="stylesheet" href="../main.css">
-    <link rel="stylesheet" href="../assets/css/article.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="../assets/css/custom.css">
 </head>
-<body>
+<body class="bg-slate-100 text-slate-800">
 
-    <header class="site-header">
-        <div class="container">
-            <div class="logo">
-                <a href="../index.html">LMY's Crypto Blog</a>
+    <!-- Header -->
+    <header class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-slate-900">Crypto Mastermind</a>
+                </div>
+                <nav class="hidden md:block">
+                    <ul class="flex items-center space-x-8 text-sm font-semibold text-slate-600">
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">首頁</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">核心系列</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">所有文章</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">關於我</a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="../index.html">首頁</a></li>
-                    <li><a href="topic-core.html">核心論述</a></li>
-                    <li><a href="archive.html">主題文章</a></li>
-                    <li><a href="../about.html">關於我</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
 
-    <main>
-        <div class="article-layout container">
-            <aside class="toc-sidebar">
-                <nav class="toc">
-                    <h3>文章目錄</h3>
-                    <ul id="toc-list"></ul>
-                </nav>
-            </aside>
-            <article class="article-container">
-                <h1>比特幣 (Bitcoin) 是什麼？2025年新手必讀</h1>
-                <p class="article-meta">發布日期：2025-10-12</p>
-
-                <!-- ▼ 文章內容開始 ▼ -->
-
-                <!-- 摘要區塊 -->
-                <div class="alert alert-tip">
-                    <strong>📖 需求自我檢測</strong>
-                    <p>在開始前，請先思考您為何對比特幣感興趣？</p>
-                    <ul>
-                        <li><strong>尋找傳統金融以外的投資標的？</strong> 您將了解比特幣作為「數位黃金」的價值儲存特性。</li>
-                        <li><strong>對新興科技與未來趨勢感到好奇？</strong> 您將探索區塊鏈如何顛覆傳統信任機制。</li>
-                        <li><strong>厭倦了中心化機構的掌控與不透明？</strong> 您將領會「去中心化」理念的革命性力量。</li>
-                        <li><strong>只是想搞懂朋友口中的「挖礦」到底是什麼？</strong> 我們將用最簡單的比喻為您解惑。</li>
+    <main class="py-12 sm:py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Main Article Content -->
+            <article class="bg-white p-8 sm:p-12 rounded-2xl shadow-lg">
+                
+                <!-- Article Hero Section -->
+                <header class="mb-8">
+                    <div class="text-sm font-semibold text-orange-500 uppercase mb-2">核心概念系列</div>
+                    <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 leading-tight font-noto">比特幣 (Bitcoin): 不只是數位黃金？</h1>
+                    <p class="mt-4 text-lg text-slate-600 max-w-3xl">
+                        一份從零開始的終極指南，我們將從華爾街分析師的視角，為您深度拆解其背後的區塊鏈技術、挖礦原理與真實投資風險。
+                    </p>
+                </header>
+                
+                <!-- Table of Contents (Integrated) -->
+                <section class="not-prose my-8 p-6 bg-slate-50 border rounded-2xl">
+                    <h3 class="text-lg font-bold text-slate-800 font-noto mb-4">本篇重點</h3>
+                    <ul id="toc-list" class="space-y-2 text-sm text-slate-600">
+                        <!-- JS will populate this -->
                     </ul>
-                    <p>無論您的出發點為何，這篇文章都將為您建構最扎實的基礎認知。</p>
-                </div>
+                </section>
 
-                <!-- 1. 背景介紹 -->
-                <h2 id="toc-heading-0">背景介紹：我們為什麼需要比特幣？</h2>
-                <p>在比特幣誕生之前，我們的金融世界完全由<strong>中心化機構</strong>（如銀行、政府）主導。每一筆轉帳、每一次支付，都需要經過這些中介機構的批准與紀錄。這種模式雖然運作多年，卻也存在一些根本性的問題：</p>
-                <ul>
-                    <li><strong>信任成本高：</strong> 我們必須無條件信任銀行不會濫用我們的資金或出錯。</li>
-                    <li><strong>效率低下：</strong> 跨國轉帳往往需要數天時間，且手續費高昂。</li>
-                    <li><strong>通膨風險：</strong> 中央銀行可以透過印鈔來應對經濟問題，這可能導致貨幣貶值，侵蝕我們的儲蓄。</li>
-                </ul>
-                <p>2008年，一位（或一群）自稱<strong>中本聰 (Satoshi Nakamoto)</strong> 的神秘人物發表了比特幣白皮書，提出了一個革命性的構想：一種完全點對點的電子現金系統，它不需要任何金融中介機構，就能讓網路上的雙方直接進行交易。這個構想的核心，就是<span class="highlight-term">區塊鏈技術</span>。</p>
+                <!-- Main Content with Typography Plugin -->
+                <div class="prose prose-slate max-w-none prose-h2:font-noto prose-h2:text-slate-800 prose-a:text-orange-600 hover:prose-a:text-orange-500 prose-strong:text-slate-700">
+                    
+                    <!-- Pain: The Problem with Traditional Finance -->
+                    <section id="toc-heading-0">
+                        <h2>困境 (Pain): 我們為何需要比特幣？</h2>
+                        <p>在比特幣誕生之前，我們的金融世界完全由<strong>中心化機構</strong>（如銀行、政府）主導。每一筆轉帳、每一次支付，都需要經過這些中介機構的批准與紀錄。這種模式雖然運作多年，卻也存在著一些根本性的問題：</p>
+                    </section>
+                    
+                    <div class="not-prose grid md:grid-cols-3 gap-6 my-8">
+                        <div class="bg-slate-50 p-6 rounded-lg border">
+                            <h4 class="font-bold text-slate-800 font-noto text-base m-0">高昂的信任成本</h4>
+                            <p class="text-sm text-slate-600 mt-2 m-0">我們必須無條件信任銀行不會濫用我們的資金或出錯。</p>
+                        </div>
+                        <div class="bg-slate-50 p-6 rounded-lg border">
+                            <h4 class="font-bold text-slate-800 font-noto text-base m-0">低下的運作效率</h4>
+                            <p class="text-sm text-slate-600 mt-2 m-0">跨國轉帳往往需要數天時間，且手續費高昂。</p>
+                        </div>
+                         <div class="bg-slate-50 p-6 rounded-lg border">
+                            <h4 class="font-bold text-slate-800 font-noto text-base m-0">持續的通膨風險</h4>
+                            <p class="text-sm text-slate-600 mt-2 m-0">央行可以透過印鈔應對經濟問題，侵蝕我們的儲蓄。</p>
+                        </div>
+                    </div>
+                    <p>2008年，一位自稱<strong>中本聰 (Satoshi Nakamoto)</strong> 的神秘人物發表了比特幣白皮書，提出了一個革命性的構想：一種完全點對點的電子現金系統，它不需要任何金融中介，就能讓網路上的雙方直接進行交易。這個構想的核心，就是<span class="highlight-term">區塊鏈技術</span>。</p>
 
-                <!-- 2. 核心技術解析 -->
-                <h2 id="toc-heading-1">核心技術解析：比特幣是如何運作的？</h2>
-                <p>比特幣的魔力在於其底層技術的精妙組合。讓我們用簡單的比喻來拆解幾個核心概念。</p>
+                    <!-- Solution: Bitcoin as the Answer -->
+                    <section id="toc-heading-1">
+                        <h2>解方 (Solution): 比特幣的核心價值主張</h2>
+                         <p>比特幣透過其底層技術的精妙組合，直接回應了傳統金融的痛點。其價值主張主要體現在以下幾個方面：</p>
+                        <div class="alert alert-analyst">
+                            <strong>分析師觀點：</strong>
+                            <p>比特幣的真正革命性不在於創造了一種新貨幣，而在於它首次實現了在「無信任」環境下的價值轉移。這意味著交易的有效性不再依賴於任何單一權威機構的背書，而是由數學和密碼學來保證。</p>
+                        </div>
+                    </section>
 
-                <h3>區塊鏈 (Blockchain)：一本全民共享的公開帳本</h3>
-                <p>想像一下，有一本<strong>公開、透明且無法竄改</strong>的數位帳本。全世界發生的每一筆比特幣交易，都會被記錄在這本帳本上。這本帳本由一個個「區塊 (Block)」鏈結而成，每個新區塊都包含了最新的交易紀錄，並透過密碼學與前一個區塊緊密相連，形成一條牢不可破的「鏈 (Chain)」。</p>
-                <div class="alert alert-tip">
-                    <strong>💡 快速提示：</strong> 因為每個區塊都包含了前一個區塊的「指紋」（雜湊值），所以一旦某個區塊的資料被竄改，其後所有的區塊都會失效，這使得修改歷史紀錄變得極其困難。
-                </div>
+                    <!-- Mechanism: How it Works -->
+                    <section id="toc-heading-2">
+                        <h2>原理 (Mechanism): 拆解比特幣的運作核心</h2>
+                        <p>比特幣的魔力在於其四大支柱，共同構建了一個去中心化且安全的價值網路。</p>
 
-                <h3>去中心化 (Decentralization)：沒有 CEO 的全球網路</h3>
-                <p>這本公開帳本並非存放在某家銀行的伺服器裡，而是由全球成千上萬台電腦（稱為「節點」）共同維護。沒有任何單一實體可以控制或關閉這個網路。這就是<strong>去中心化</strong>的核心精神——權力分散，系統的運作由共識演算法決定，而非單一機構的指令。</p>
+                        <h3>1. 區塊鏈：一本全民共享的公開帳本</h3>
+                        <p>想像一本<strong>公開、透明且無法竄改</strong>的數位帳本。全世界發生的每一筆比特幣交易，都被記錄在這本帳本上。這本帳本由一個個「區塊 (Block)」鏈結而成，每個新區塊都包含了最新的交易紀錄，並透過密碼學與前一個區塊緊密相連，形成一條牢不可破的「鏈 (Chain)」。</p>
+                        
+                        <figure class="not-prose bg-slate-50 rounded-lg p-4 my-8 border">
+                            <svg class="w-full h-auto" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+                                <!-- SVG content from previous version -->
+                                <g>
+                                    <rect x="50" y="50" width="150" height="100" rx="10" fill="#d1d5db" stroke="#9ca3af" stroke-width="2"/>
+                                    <text x="125" y="80" font-family="Inter, sans-serif" font-weight="600" text-anchor="middle" fill="#1f2937">Block N-1</text>
+                                    <text x="125" y="110" font-family="monospace" font-size="12" text-anchor="middle" fill="#4b5563">Hash: 0xAbc...</text>
+                                    <text x="125" y="130" font-family="monospace" font-size="12" text-anchor="middle" fill="#4b5563">Txns...</text>
+                                </g>
+                                <g>
+                                    <rect x="325" y="50" width="150" height="100" rx="10" fill="#d1d5db" stroke="#9ca3af" stroke-width="2"/>
+                                    <text x="400" y="80" font-family="Inter, sans-serif" font-weight="600" text-anchor="middle" fill="#1f2937">Block N</text>
+                                    <text x="400" y="110" font-family="monospace" font-size="12" text-anchor="middle" fill="#4b5563">Hash: 0xDef...</text>
+                                    <text x="400" y="130" font-family="monospace" font-size="12" text-anchor="middle" fill="#4b5563">Prev Hash: 0xAbc...</text>
+                                </g>
+                                <g>
+                                    <rect x="600" y="50" width="150" height="100" rx="10" fill="#f97316" stroke="#ea580c" stroke-width="2"/>
+                                    <text x="675" y="80" font-family="Inter, sans-serif" font-weight="600" text-anchor="middle" fill="white">Block N+1</text>
+                                    <text x="675" y="110" font-family="monospace" font-size="12" text-anchor="middle" fill="white">Hash: 0xGhi...</text>
+                                    <text x="675" y="130" font-family="monospace" font-size="12" text-anchor="middle" fill="white">Prev Hash: 0xDef...</text>
+                                </g>
+                                <path d="M 200 100 H 325" stroke="#9ca3af" stroke-width="2" stroke-dasharray="5,5"/>
+                                <path d="M 475 100 H 600" stroke="#9ca3af" stroke-width="2" stroke-dasharray="5,5"/>
+                            </svg>
+                             <figcaption class="text-xs text-center text-slate-500 mt-2">每個新區塊都包含前一個區塊的「雜湊值 (Hash)」，形成一條不可竄改的鏈。</figcaption>
+                        </figure>
 
-                <h3>挖礦 (Mining)：驗證交易的競爭過程</h3>
-                <p>既然沒有銀行來處理交易，誰來負責將新的交易紀錄寫入帳本呢？答案是「礦工 (Miners)」。</p>
-                <p>礦工們透過強大的電腦算力，競爭解決一道複雜的數學難題。第一個解出答案的礦工，就能獲得打包下一個區塊的權利，並將其廣播到整個網路。作為回報，他會收到兩份獎勵：新生成的比特幣（區塊獎勵）以及該區塊內所有交易的手續費。</p>
-                <div class="alert alert-tech">
-                    <strong>⚙️ 技術重點：工作量證明 (Proof-of-Work)</strong><br>
-                    這種透過消耗算力來競爭記帳權的機制，稱為「工作量證明」。它確保了只有付出真實世界成本（電力、硬體）的參與者才能寫入新區塊，從而保障了網路的安全性。
-                </div>
+                        <h3>2. 去中心化：沒有 CEO 的全球網路</h3>
+                        <p>這本公開帳本並非存放在某家銀行的伺服器裡，而是由全球成千上萬台電腦（稱為「節點」）共同維護。沒有任何單一實體可以控制或關閉這個網路。這就是<span class="highlight-term">去中心化</span>的核心精神——權力分散，系統的運作由共識演算法決定，而非單一機構的指令。</p>
 
-                <h3>UTXO 模型：像現金一樣運作的帳戶</h3>
-                <p>比特幣的帳戶模型與銀行帳戶的「餘額」概念不同。它更像是你皮夾裡的<strong>實體鈔票</strong>。這個模型稱為 <span class="highlight-term">UTXO (Unspent Transaction Output)</span>，意指「未花費的交易輸出」。</p>
-                <p><strong>比喻：</strong> 假設你有一個10元的UTXO（就像一張10元鈔票），你想買一個3元的麵包。你必須把這張10元鈔票「完整花掉」，然後你會收到一個7元的UTXO作為「找零」。你的錢包裡從來沒有一個顯示「餘額」的地方，只有一堆不同面額、可以花費的UTXO。</p>
-                
-                <h3>2100萬枚的稀缺性</h3>
-                <p>比特幣的發行總量被程式碼永久鎖定在<strong>2100萬枚</strong>。這種內建的稀缺性，使其具備了對抗通膨的潛力，這也是許多人將其比作「數位黃金」的主要原因。</p>
+                        <h3>3. 挖礦 (工作量證明 PoW)：驗證交易的競爭過程</h3>
+                        <p>既然沒有銀行來處理交易，誰來負責將新的交易紀錄寫入帳本呢？答案是「礦工 (Miners)」。礦工們透過強大的電腦算力，競爭解決一道複雜的數學難題。第一個解出答案的礦工，就能獲得打包下一個區塊的權利，並獲得新生成的比特幣（區塊獎勵）與交易手續費作為回報。這種透過消耗真實世界成本（電力、硬體）來保障網路安全的機制，稱為<span class="highlight-term">工作量證明 (Proof-of-Work)</span>。</p>
 
-                <!-- 3. 生態發展與市場分析 -->
-                <h2 id="toc-heading-2">生態發展與市場分析：比特幣的潛力在哪？</h2>
-                <p>比特幣已經從一個極客的實驗，發展成為一個全球性的金融資產與技術平台。</p>
-                <ul>
-                    <li><strong>價值儲存 (數位黃金)：</strong> 這是目前最被廣泛認可的價值主張。由於其稀缺性、去中心化和安全性，許多機構與個人將比特幣視為對沖宏觀經濟風險的工具。</li>
-                    <li><strong>支付網路：</strong> 雖然比特幣主鏈的交易速度和成本不適合小額高頻支付，但像<strong>閃電網路 (Lightning Network)</strong> 這樣的第二層解決方案，正致力於解決這個問題，實現即時、低成本的支付。</li>
-                    <li><strong>新興生態：</strong> 隨著技術升級（如 Taproot），比特幣網路上開始出現更多可能性，例如 Ordinals 協議（類似於 NFT）和更多元的 Layer 2 擴展方案，為其生態注入了新的活力。</li>
-                </ul>
+                        <h3>4. 2100萬枚的稀缺性：數位黃金的基石</h3>
+                        <p>比特幣的發行總量被程式碼永久鎖定在<strong>2100萬枚</strong>。這種內建的、可驗證的稀缺性，使其具備了對抗通膨的潛力，這也是許多人將其比作「數位黃金」的主要原因。</p>
+                    </section>
+                    
+                    <!-- Action: How to Evaluate and Participate -->
+                    <section id="toc-heading-3">
+                        <h2>行動 (Action): 如何評估與安全參與？</h2>
+                        <p>儘管前景看好，但投資比特幣仍伴隨著不可忽視的風險。在投入資金前，您必須了解以下幾點：</p>
+                        <div class="alert alert-warning">
+                            <strong>⚠️ 風險提示：價格波動劇烈</strong><br>
+                            比特幣的價格以高波動性著稱，單日漲跌幅超過10%是常態。投資者必須做好心理準備，並投入自己能夠承受損失的資金。
+                        </div>
+                        <ul>
+                            <li><strong>監管不確定性：</strong> 全球各國對加密貨幣的監管政策仍在不斷演變，任何重大政策變化都可能對市場產生巨大影響。</li>
+                            <li><strong>安全責任自負：</strong> 作為一個去中心化的資產，保護私鑰的責任完全落在用戶自己身上。一旦私鑰丟失或被盜，資產將永久無法找回。<strong>「Not your keys, not your coins」</strong>是加密世界的第一守則。</li>
+                        </ul>
+                    </section>
 
-                <!-- 4. 風險與挑戰 -->
-                <h2 id="toc-heading-3">風險與挑戰：投資前需要注意什麼？</h2>
-                <p>儘管前景看好，但投資比特幣仍伴隨著不可忽視的風險。</p>
-                <div class="alert alert-warning">
-                    <strong>⚠️ 風險提示：價格波動劇烈</strong><br>
-                    比特幣的價格以高波動性著稱，單日漲跌幅超過10%是常態。投資者必須做好心理準備，並投入自己能夠承受損失的資金。
-                </div>
-                <ul>
-                    <li><strong>監管不確定性：</strong> 全球各國對加密貨幣的監管政策仍在不斷演變，任何重大政策變化都可能對市場產生巨大影響。</li>
-                    <li><strong>安全責任自負：</strong> 作為一個去中心化的資產，保護私鑰的責任完全落在用戶自己身上。一旦私鑰丟失或被盜，資產將永久無法找回。<strong>「Not your keys, not your coins」</strong>是加密世界的第一守則。</li>
-                </ul>
-
-                <!-- 5. 常見問題 (FAQ) -->
-                <h2 id="toc-heading-4">常見問題 (FAQ)</h2>
-                <dl>
-                    <dt><strong>Q1: 我需要購買一整枚比特幣嗎？</strong></dt>
-                    <dd>A1: 完全不需要。比特幣可以被分割到小數點後八位，最小單位是「聰 (Satoshi)」。您可以根據自己的預算購買任意金額的比特幣。</dd>
-
-                    <dt><strong>Q2: 比特幣交易是匿名的嗎？</strong></dt>
-                    <dd>A2: 不是完全匿名，而是「假名 (Pseudonymous)」。雖然您的真實身分沒有直接連結到您的比特幣地址，但所有交易都在區塊鏈上公開可查。透過鏈上分析，仍有可能追蹤到資金的流向。</dd>
-
-                    <dt><strong>Q3: 比特幣的價格由誰決定？</strong></dt>
-                    <dd>A3: 和其他自由市場的資產一樣，比特幣的價格由<strong>市場供需關係</strong>決定。當買方需求大於賣方供給時，價格上漲，反之亦然。</dd>
-                </dl>
-                
-                <!-- ▲ 文章內容結束 ▲ -->
-
+                    <!-- FAQ -->
+                    <section id="toc-heading-4">
+                        <h2>常見問題 (FAQ)</h2>
+                        <div class="not-prose space-y-4">
+                            <div class="faq-item border rounded-lg">
+                                <details class="p-4 group">
+                                    <summary class="flex justify-between items-center cursor-pointer font-semibold">
+                                        <span>Q1: 我需要購買一整枚比特幣嗎？</span>
+                                        <svg class="arrow-down w-5 h-5 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+                                    </summary>
+                                    <div class="mt-4 text-slate-600">
+                                        <p>完全不需要。比特幣可以被分割到小數點後八位，最小單位是「聰 (Satoshi)」。您可以根據自己的預算購買任意金額的比特幣。</p>
+                                    </div>
+                                </details>
+                            </div>
+                             <div class="faq-item border rounded-lg">
+                                <details class="p-4 group">
+                                    <summary class="flex justify-between items-center cursor-pointer font-semibold">
+                                        <span>Q2: 比特幣交易是匿名的嗎？</span>
+                                        <svg class="arrow-down w-5 h-5 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+                                    </summary>
+                                    <div class="mt-4 text-slate-600">
+                                        <p>不是完全匿名，而是「假名 (Pseudonymous)」。雖然您的真實身分沒有直接連結到您的比特幣地址，但所有交易都在區塊鏈上公開可查。透過鏈上分析，仍有可能追蹤到資金的流向。</p>
+                                    </div>
+                                </details>
+                            </div>
+                             <div class="faq-item border rounded-lg">
+                                <details class="p-4 group">
+                                    <summary class="flex justify-between items-center cursor-pointer font-semibold">
+                                        <span>Q3: 比特幣的價格由誰決定？</span>
+                                        <svg class="arrow-down w-5 h-5 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+                                    </summary>
+                                    <div class="mt-4 text-slate-600">
+                                        <p>和其他自由市場的資產一樣，比特幣的價格由<strong>市場供需關係</strong>決定。當買方需求大於賣方供給時，價格上漲，反之亦然。</p>
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+                    </section>
+                </div> <!-- End Prose -->
             </article>
         </div>
     </main>
 
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2024 LMY's Crypto Blog. All Rights Reserved.</p>
+    <footer class="bg-slate-900 text-slate-400 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-sm">
+            <p>&copy; 2025 Crypto Mastermind. All Rights Reserved.</p>
+            <p class="mt-2">免責聲明：本站內容僅供資訊參考，不構成任何投資建議。</p>
         </div>
     </footer>
 
-    <!-- 目錄生成腳本 -->
+    <!-- TOC Generation Script -->
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         const tocList = document.getElementById('toc-list');
-        const article = document.querySelector('.article-container');
+        const article = document.querySelector('article');
         if (!tocList || !article) return;
 
         const headings = article.querySelectorAll('h2');
+        let tocHTML = '';
         headings.forEach((heading, index) => {
-            const id = heading.id || 'toc-heading-' + index;
-            heading.id = id;
-            const listItem = `<li><a href="#${id}">${heading.textContent}</a></li>`;
-            tocList.innerHTML += listItem;
+            const section = heading.parentElement;
+            const id = section.id || 'toc-heading-' + index;
+            section.id = id;
+            const listItem = `<li><a href="#${id}" class="block py-1 hover:text-orange-500 font-medium transition-colors">${heading.textContent}</a></li>`;
+            tocHTML += listItem;
         });
+        tocList.innerHTML = tocHTML;
     });
     </script>
-
 </body>
 </html>
+
+

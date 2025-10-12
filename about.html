@@ -3,60 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>關於我 | LMY's Crypto Blog</title>
-    <meta name="description" content="了解 LMY's Crypto Blog 背後的理念與使命。我們致力於提供最準確、最深入的區塊鏈與加密貨幣分析。">
+    <title>關於我 | Crypto Mastermind</title>
+    <meta name="description" content="了解 Crypto Mastermind 背後的理念與使命。我們致力於提供最準確、最深入的區塊鏈與加密貨幣分析。">
     <meta name="google-site-verification" content="F1sAja4V6KTk17SiojYOS8UF1GP9-hu8TXI8iVKQ27Y" />
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="assets/css/about.css">
-</head>
-<body>
 
-    <header class="site-header">
-        <div class="container">
-            <div class="logo">
-                <a href="index.html">LMY's Crypto Blog</a>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com/3.4.1?plugins=typography"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body class="bg-slate-100 text-slate-800">
+
+    <!-- Header -->
+    <header class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-slate-900">Crypto Mastermind</a>
+                </div>
+                <nav class="hidden md:block">
+                    <ul class="flex items-center space-x-8 text-sm font-semibold text-slate-600">
+                        <li><a href="index.html" class="hover:text-orange-500 transition-colors">首頁</a></li>
+                        <li><a href="post/topic-core.html" class="hover:text-orange-500 transition-colors">核心論述</a></li>
+                        <li><a href="post/archive.html" class="hover:text-orange-500 transition-colors">主題文章</a></li>
+                        <li><a href="about.html" class="hover:text-orange-500 transition-colors">關於我</a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html">首頁</a></li>
-                    <li><a href="post/topic-core.html">核心論述</a></li>
-                    <li><a href="post/archive.html">主題文章</a></li>
-                    <li><a href="about.html">關於我</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
 
-    <main class="main-container">
-        <header class="page-header">
-            <h1 class="page-title">關於 LMY's Crypto Blog</h1>
-            <p class="page-subtitle">洞察噪音，專注價值</p>
-        </header>
+    <main class="py-12 sm:py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <article class="bg-white p-8 sm:p-12 rounded-2xl shadow-lg">
+                <header class="text-center mb-12">
+                    <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 leading-tight font-noto">關於 Crypto Mastermind</h1>
+                    <p class="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">洞察噪音，專注價值</p>
+                </header>
 
-        <section class="content-section">
-            <h2>為什麼需要這個部落格</h2>
-            <p>如果更多的市場資訊就是解答，那麼理論上，我們現在應該都比以往任何時候更擅長投資。</p>
-            <p>但事實顯然並非如此。</p>
-            <p>明明我們擁有的數據、快訊和「專家分析」，比過去幾十年都多，但多數人在加密貨幣市場中的焦慮與虧損卻還是史上最高。</p>
-            <p>這讓我們認為，問題不在於資訊的多寡，而在於**資訊的形式與深度**。</p>
-            <hr>
-            <p>而這個部落格存在的理由，正是為了解決這個問題。</p>
-            <p>因為一些 KOL 或媒體只會給你暴漲暴跌的焦慮，並希望你點擊他們的推薦連結。</p>
-            <p>但一個真正關心你的分析者，會分享知識與方法論給你，並期望你也建立自己的投資框架。</p>
-            <p style="margin-bottom: 40px;">我們不想再製造更多的市場噪音、FOMO情緒、與無謂的焦慮。</p>
-
-            <p><strong>我們的目標，是提供一本深入的加密貨幣參考書，歡迎您對任何項目或賽道有疑問時，隨時來翻閱。</strong></p>
-            <p>我們想成為知識的傳播者，也當一個好的「翻譯者」——把一門艱深的技術或經濟模型，翻譯成你可以理解、可以應用的投資洞見。</p>
-            <hr>
-            <p>也許建立這個部落格不如在社群媒體上喊單那麼引人注目，但我們認為它同樣重要。</p>
-            <p><strong>甚至會是大家更需要的。</strong></p>
-            <p style="text-align: right; margin-top: 40px; font-style: italic;">LMY</p>
-        </section>
+                <div class="prose prose-slate max-w-none lg:prose-lg prose-h2:font-noto prose-strong:text-slate-800">
+                    <h2>為什麼需要這個部落格</h2>
+                    <p>如果更多的市場資訊就是解答，那麼理論上，我們現在應該都比以往任何時候更擅長投資。</p>
+                    <p>但事實顯然並非如此。</p>
+                    <p>明明我們擁有的數據、快訊和「專家分析」，比過去幾十年都多，但多數人在加密貨幣市場中的焦慮與虧損卻還是史上最高。</p>
+                    <p>這讓我們認為，問題不在於資訊的多寡，而在於<strong>資訊的形式與深度</strong>。</p>
+                    <hr class="my-8">
+                    <p>而這個部落格存在的理由，正是為了解決這個問題。</p>
+                    <p>因為一些 KOL 或媒體只會給你暴漲暴跌的焦慮，並希望你點擊他們的推薦連結。</p>
+                    <p>但一個真正關心你的分析者，會分享知識與方法論給你，並期望你也建立自己的投資框架。</p>
+                    <p>我們不想再製造更多的市場噪音、FOMO情緒、與無謂的焦慮。</p>
+                    
+                    <p class="text-xl font-semibold text-slate-900 my-8 text-center bg-slate-50 p-6 rounded-lg">我們的目標，是提供一本深入的加密貨幣參考書，歡迎您對任何項目或賽道有疑問時，隨時來翻閱。</p>
+                    
+                    <p>我們想成為知識的傳播者，也當一個好的「翻譯者」——把一門艱深的技術或經濟模型，翻譯成你可以理解、可以應用的投資洞見。</p>
+                    <hr class="my-8">
+                    <p>也許建立這個部落格不如在社群媒體上喊單那麼引人注目，但我們認為它同樣重要。</p>
+                    <p><strong>甚至會是大家更需要的。</strong></p>
+                    <p class="text-right mt-12 italic text-slate-600">LMY</p>
+                </div>
+            </article>
+        </div>
     </main>
 
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2024 LMY's Crypto Blog. All Rights Reserved.</p>
+    <footer class="bg-slate-900 text-slate-400 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-sm">
+            <p>&copy; 2025 Crypto Mastermind. All Rights Reserved.</p>
+            <p class="mt-2">免責聲明：本站內容僅供資訊參考，不構成任何投資建議。</p>
         </div>
     </footer>
 

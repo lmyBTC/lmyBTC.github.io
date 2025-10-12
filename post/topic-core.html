@@ -3,71 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>核心系列 | LMY's Crypto Blog</title>
-    <meta name="description" content="探索核心系列文章，深入了解加密貨幣的基礎設施與核心技術。">
+    <title>核心論述 | Crypto Mastermind</title>
+    <meta name="description" content="探索 Crypto Mastermind 的核心論述系列文章，深入了解加密貨幣的基礎設施與核心技術。">
     <meta name="google-site-verification" content="F1sAja4V6KTk17SiojYOS8UF1GP9-hu8TXI8iVKQ27Y" />
-    <link rel="stylesheet" href="../main.css">
-    <link rel="stylesheet" href="../assets/css/archive.css">
-    <link rel="stylesheet" href="../assets/css/topic-core.css">
-</head>
-<body>
 
-    <header class="site-header">
-        <div class="container">
-            <div class="logo">
-                <a href="../index.html">LMY's Crypto Blog</a>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="../assets/css/custom.css">
+</head>
+<body class="bg-slate-100 text-slate-800">
+
+    <!-- Header -->
+    <header class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="../index.html" class="text-2xl font-bold text-slate-900">Crypto Mastermind</a>
+                </div>
+                <nav class="hidden md:block">
+                    <ul class="flex items-center space-x-8 text-sm font-semibold text-slate-600">
+                        <li><a href="../index.html" class="hover:text-orange-500 transition-colors">首頁</a></li>
+                        <li><a href="topic-core.html" class="hover:text-orange-500 transition-colors">核心論述</a></li>
+                        <li><a href="archive.html" class="hover:text-orange-500 transition-colors">主題文章</a></li>
+                        <li><a href="../about.html" class="hover:text-orange-500 transition-colors">關於我</a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="../index.html">首頁</a></li>
-                    <li><a href="topic-core.html">核心論述</a></li>
-                    <li><a href="archive.html">主題文章</a></li>
-                    <li><a href="../about.html">關於我</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
 
-    <main class="container">
-        <header class="archive-header">
-            <h1 class="archive-title" id="archive-title">核心系列</h1>
-            <p class="archive-subtitle">這裡彙整了加密貨幣世界最核心、最不容錯過的基礎設施與技術解析。</p>
-        </header>
-
-        <div class="archive-grid">
-            <div class="article-card" id="card-core-btc" data-category="core" data-published="2025-10-12" data-modified="2025-10-12">
-                <div class="card-content">
-                    <span class="card-tag">核心系列</span>
-                    <a href="core-btc.html" class="card-title-link"><h2 class="card-title">核心系列：比特幣</h2></a>
-                    <p class="card-desc">深入探討比特幣的核心技術、歷史與未來發展。</p>
-                    <a href="core-btc.html" class="card-read-more">閱讀全文 &rarr;</a>
-                </div>
-                <div class="card-metadata">
-                    <h4>文章資訊</h4>
-                    <p><strong>關鍵字:</strong> <span>比特幣, Bitcoin, 區塊鏈, 去中心化, 挖礦, 數位黃金</span></p>
-                    <p><strong>最後更新:</strong> <span>2025-10-12</span></p>
-                </div>
+    <main class="py-12 sm:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Page Header -->
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 leading-tight font-noto">核心論述</h1>
+                <p class="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">
+                    這裡彙整了加密貨幣世界最核心、最不容錯過的基礎設施與技術解析。
+                </p>
             </div>
 
-            <div class="article-card" id="card-core-eth-alt" data-category="core" data-published="2025-10-12" data-modified="2025-10-12">
-                <div class="card-content">
-                    <span class="card-tag">核心系列</span>
-                    <a href="core-eth-alt.html" class="card-title-link"><h2 class="card-title">核心系列：以太坊與山寨幣 (ALT)</h2></a>
-                    <p class="card-desc">深入了解以太坊的智能合約功能，並探索山寨幣 (Altcoins) 的世界，尋找下一個投資機會。</p>
-                    <a href="core-eth-alt.html" class="card-read-more">閱讀全文 &rarr;</a>
+            <!-- Articles Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Article Card for BTC -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden group">
+                    <a href="core-btc.html" class="block">
+                        <div class="p-8">
+                            <div class="text-sm font-semibold text-orange-500 uppercase mb-2">核心概念</div>
+                            <h2 class="text-2xl font-bold text-slate-900 font-noto group-hover:text-orange-600 transition-colors">比特幣 (Bitcoin): 不只是數位黃金？</h2>
+                            <p class="mt-3 text-slate-600 text-sm leading-relaxed">一份從零開始的終極指南，我們將從華爾街分析師的視角，為您深度拆解其背後的區塊鏈技術、挖礦原理與真實投資風險。</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="card-metadata">
-                    <h4>文章資訊</h4>
-                    <p><strong>關鍵字:</strong> <span>以太坊, Ethereum, ETH, 山寨幣, Altcoin, 智能合約, DeFi, NFT</span></p>
-                    <p><strong>最後更新:</strong> <span>2025-10-12</span></p>
+
+                <!-- Article Card for ETH & Alts -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden group">
+                    <a href="core-eth-alt.html" class="block">
+                        <div class="p-8">
+                            <div class="text-sm font-semibold text-violet-500 uppercase mb-2">核心概念</div>
+                            <h2 class="text-2xl font-bold text-slate-900 font-noto group-hover:text-violet-600 transition-colors">以太坊 (ETH) & 山寨幣 (ALT)</h2>
+                            <p class="mt-3 text-slate-600 text-sm leading-relaxed">比特幣之後，區塊鏈的第二場革命。本篇指南將為您揭示以太坊如何成為「世界電腦」，並提供一套評估山寨幣潛力的專業框架。</p>
+                        </div>
+                    </a>
                 </div>
+
             </div>
         </div>
     </main>
 
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2024 LMY's Crypto Blog. All Rights Reserved.</p>
+    <footer class="bg-slate-900 text-slate-400 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-sm">
+            <p>&copy; 2025 Crypto Mastermind. All Rights Reserved.</p>
+            <p class="mt-2">免責聲明：本站內容僅供資訊參考，不構成任何投資建議。</p>
         </div>
     </footer>
 

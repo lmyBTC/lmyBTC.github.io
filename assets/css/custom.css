@@ -1,0 +1,48 @@
+body {
+    font-family: 'Inter', 'Noto Sans TC', sans-serif;
+}
+.font-noto {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.highlight-term {
+    border-bottom: 2px solid #f97316; /* orange-500 */
+    padding-bottom: 1px;
+    font-weight: 600;
+}
+/* Custom alert box styles (to override prose) */
+.alert {
+    border-left-width: 4px;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.alert-analyst { /* Blue */
+    background-color: #eff6ff;
+    border-color: #3b82f6;
+    color: #1e40af;
+}
+.alert-warning { /* Red */
+    background-color: #fef2f2;
+    border-color: #ef4444;
+    color: #b91c1c;
+}
+.alert p { margin: 0; }
+.alert strong {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: inherit;
+}
+h1, h2, h3, h4, h5, h6 {
+    scroll-margin-top: 5rem; /* Offset for sticky header */
+}
+.faq-item details > summary {
+    list-style: none;
+}
+.faq-item details > summary::-webkit-details-marker {
+    display: none;
+}
+.faq-item details[open] summary .arrow-down {
+    transform: rotate(180deg);
+}
