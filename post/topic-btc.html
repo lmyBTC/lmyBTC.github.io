@@ -3,49 +3,326 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>比特幣 (BTC) 生態 | LMY's Crypto Blog</title>
-    <meta name="description" content="探索所有關於比特幣(BTC)生態的深度分析文章，包含 Layer 2、Ordinals、宏觀趨勢等。">
+    
+    <!-- SEO 與 Metadata (已根據 V.I.P. + B.R.A.V.E. 框架優化) -->
+    <title>比特幣 (Bitcoin) - 不只是數位黃金？從零搞懂區塊鏈、挖礦與投資風險的終極指南 | Crypto Mastermind</title>
+    <meta name="description" content="想徹底搞懂比特幣？本篇終極指南將從華爾街分析師視角，深度拆解區塊鏈技術、挖礦原理與真實投資風險，助您在加密貨幣市場中做出明智決策。">
+    <meta name="keywords" content="比特幣, Bitcoin, 加密貨幣, 區塊鏈, 去中心化, 挖礦, 中本聰, UTXO, 數位黃金, 投資風險, Crypto Mastermind">
     <meta name="google-site-verification" content="F1sAja4V6KTk17SiojYOS8UF1GP9-hu8TXI8iVKQ27Y" />
-    <link rel="stylesheet" href="../main.css">
-    <link rel="stylesheet" href="../assets/css/topic-page.css">
-</head>
-<body>
 
-    <header class="site-header">
-        <div class="container">
-            <div class="logo">
-                <a href="../index.html">LMY's Crypto Blog</a>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- JSON-LD 結構化資料 (已更新) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://lmybtc.github.io/post/core-btc.html"
+      },
+      "headline": "比特幣 (Bitcoin) - 不只是數位黃金？從零搞懂區塊鏈、挖礦與投資風險的終極指南 | Crypto Mastermind",
+      "description": "想徹底搞懂比特幣？本篇終極指南將從華爾街分析師視角，深度拆解區塊鏈技術、挖礦原理與真實投資風險，助您在加密貨幣市場中做出明智決策。",
+      "author": {
+        "@type": "Organization",
+        "name": "Crypto Mastermind",
+        "url": "https://lmybtc.github.io/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Crypto Mastermind"
+      },
+      "datePublished": "2025-10-12",
+      "dateModified": "2025-10-12"
+    }
+    </script>
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans TC', sans-serif;
+            background-color: #f8fafc; /* light gray background */
+        }
+        .font-noto {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        .highlight-term {
+            border-bottom: 2px solid #f97316; /* orange-500 */
+            padding-bottom: 1px;
+            font-weight: 600;
+        }
+        /* Style for custom alert boxes from the guide */
+        .alert {
+            border-left-width: 4px;
+            padding: 1rem 1.5rem;
+            border-radius: 0.5rem;
+            margin: 1.5rem 0;
+        }
+        .alert-tip { /* Green */
+            background-color: #f0fdf4;
+            border-color: #22c55e;
+            color: #15803d;
+        }
+        .alert-analyst { /* Blue */
+            background-color: #eff6ff;
+            border-color: #3b82f6;
+            color: #1e40af;
+        }
+        .alert-warning { /* Red */
+            background-color: #fef2f2;
+            border-color: #ef4444;
+            color: #b91c1c;
+        }
+        .alert strong {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            scroll-margin-top: 4rem; /* Offset for sticky header */
+        }
+        .faq-item details > summary {
+            list-style: none;
+        }
+        .faq-item details > summary::-webkit-details-marker {
+            display: none;
+        }
+        .faq-item details[open] summary .arrow-down {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-slate-900">Crypto Mastermind</a>
+                </div>
+                <nav class="hidden md:block">
+                    <ul class="flex items-center space-x-8 text-sm font-semibold text-slate-600">
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">首頁</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">核心系列</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">所有文章</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">關於我</a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="../index.html">首頁</a></li>
-                    <li><a href="topic-core.html">核心論述</a></li>
-                    <li><a href="archive.html">主題文章</a></li>
-                    <li><a href="../about.html">關於我</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
 
-    <main>
-        <header class="topic-page-header">
-            <h1 class="topic-page-title">比特幣 (BTC) 生態</h1>
-            <p class="topic-page-subtitle">探索比特幣的 Layer 2、Ordinals、以及作為數位黃金的宏觀趨勢。</p>
-        </header>
+    <main class="py-12 sm:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-12 gap-8">
+            
+            <!-- Table of Contents (Sidebar) -->
+            <aside class="hidden lg:block col-span-3">
+                <nav class="sticky top-24">
+                    <h3 class="text-sm font-bold uppercase tracking-wider text-slate-500 mb-4 font-noto">文章目錄</h3>
+                    <ul id="toc-list" class="space-y-2 text-sm text-slate-600">
+                        <!-- JS will populate this -->
+                    </ul>
+                </nav>
+            </aside>
 
-        <section class="article-list-section">
-            <h2>相關文章</h2>
-            <div class="placeholder-text">
-                <p>此處將整理關於 BTC 生態的相關文章連結。</p>
-            </div>
-        </section>
+            <!-- Main Article Content -->
+            <article class="col-span-12 lg:col-span-9 bg-white p-8 sm:p-12 rounded-2xl shadow-lg">
+                
+                <!-- Article Hero Section -->
+                <header class="mb-12 border-b pb-8">
+                    <div class="text-sm font-semibold text-orange-500 uppercase mb-2">核心概念系列</div>
+                    <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 leading-tight font-noto">比特幣 (Bitcoin): 不只是數位黃金？</h1>
+                    <p class="mt-4 text-lg text-slate-600 max-w-3xl">
+                        一份從零開始的終極指南，我們將從華爾街分析師的視角，為您深度拆解其背後的區塊鏈技術、挖礦原理與真實投資風險。
+                    </p>
+                    <div class="mt-6 text-sm text-slate-500">發布日期：2025-10-12</div>
+                </header>
+
+                <!-- Restructured Content following PSMA -->
+
+                <!-- Pain: The Problem with Traditional Finance -->
+                <section id="toc-heading-0" class="prose max-w-none prose-slate prose-a:text-orange-600 hover:prose-a:text-orange-500">
+                    <h2 class="font-noto">困境 (Pain): 我們為何需要比特幣？</h2>
+                    <p>在比特幣誕生之前，我們的金融世界完全由<strong>中心化機構</strong>（如銀行、政府）主導。每一筆轉帳、每一次支付，都需要經過這些中介機構的批准與紀錄。這種模式雖然運作多年，卻也存在著一些根本性的問題：</p>
+                    
+                    <div class="grid md:grid-cols-3 gap-6 my-8">
+                        <div class="bg-slate-50 p-6 rounded-lg">
+                            <h4 class="font-bold text-slate-800 font-noto">高昂的信任成本</h4>
+                            <p class="text-sm text-slate-600 mt-2">我們必須無條件信任銀行不會濫用我們的資金或出錯。</p>
+                        </div>
+                        <div class="bg-slate-50 p-6 rounded-lg">
+                            <h4 class="font-bold text-slate-800 font-noto">低下的運作效率</h4>
+                            <p class="text-sm text-slate-600 mt-2">跨國轉帳往往需要數天時間，且手續費高昂。</p>
+                        </div>
+                         <div class="bg-slate-50 p-6 rounded-lg">
+                            <h4 class="font-bold text-slate-800 font-noto">持續的通膨風險</h4>
+                            <p class="text-sm text-slate-600 mt-2">央行可以透過印鈔應對經濟問題，侵蝕我們的儲蓄。</p>
+                        </div>
+                    </div>
+
+                    <p>2008年，一位自稱<strong>中本聰 (Satoshi Nakamoto)</strong> 的神秘人物發表了比特幣白皮書，提出了一個革命性的構想：一種完全點對點的電子現金系統，它不需要任何金融中介，就能讓網路上的雙方直接進行交易。這個構想的核心，就是<span class="highlight-term">區塊鏈技術</span>。</p>
+                </section>
+                
+                <!-- Solution: Bitcoin as the Answer -->
+                <section id="toc-heading-1" class="prose max-w-none prose-slate prose-a:text-orange-600 hover:prose-a:text-orange-500 mt-12">
+                    <h2 class="font-noto">解方 (Solution): 比特幣的核心價值主張</h2>
+                     <p>比特幣透過其底層技術的精妙組合，直接回應了傳統金融的痛點。其價值主張主要體現在以下幾個方面：</p>
+                    <div class="alert alert-analyst">
+                        <strong>分析師觀點：</strong>
+                        <p>比特幣的真正革命性不在於創造了一種新貨幣，而在於它首次實現了在「無信任」環境下的價值轉移。這意味著交易的有效性不再依賴於任何單一權威機構的背書，而是由數學和密碼學來保證。</p>
+                    </div>
+                </section>
+
+                <!-- Mechanism: How it Works -->
+                <section id="toc-heading-2" class="prose max-w-none prose-slate prose-a:text-orange-600 hover:prose-a:text-orange-500 mt-12">
+                    <h2 class="font-noto">原理 (Mechanism): 拆解比特幣的運作核心</h2>
+                    <p>比特幣的魔力在於其四大支柱，共同構建了一個去中心化且安全的價值網路。</p>
+
+                    <h3>1. 區塊鏈：一本全民共享的公開帳本</h3>
+                    <p>想像一本<strong>公開、透明且無法竄改</strong>的數位帳本。全世界發生的每一筆比特幣交易，都被記錄在這本帳本上。這本帳本由一個個「區塊 (Block)」鏈結而成，每個新區塊都包含了最新的交易紀錄，並透過密碼學與前一個區塊緊密相連，形成一條牢不可破的「鏈 (Chain)」。</p>
+                    
+                    <!-- Custom SVG Visualization -->
+                    <div class="bg-slate-50 rounded-lg p-6 my-8 text-center">
+                        <svg class="w-full h-auto" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#f97316;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#fb923c;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <!-- Block N-1 -->
+                            <g>
+                                <rect x="50" y="50" width="150" height="100" rx="10" fill="#d1d5db" stroke="#9ca3af" stroke-width="2"/>
+                                <text x="125" y="80" font-family="Inter, sans-serif" font-weight="600" text-anchor="middle" fill="#1f2937">Block N-1</text>
+                                <text x="125" y="110" font-family="monospace" font-size="12" text-anchor="middle" fill="#4b5563">Hash: 0xAbc...</text>
+                                <text x="125" y="130" font-family="monospace" font-size="12" text-anchor="middle" fill="#4b5563">Txns...</text>
+                            </g>
+                            <!-- Block N -->
+                            <g>
+                                <rect x="325" y="50" width="150" height="100" rx="10" fill="#d1d5db" stroke="#9ca3af" stroke-width="2"/>
+                                <text x="400" y="80" font-family="Inter, sans-serif" font-weight="600" text-anchor="middle" fill="#1f2937">Block N</text>
+                                <text x="400" y="110" font-family="monospace" font-size="12" text-anchor="middle" fill="#4b5563">Hash: 0xDef...</text>
+                                <text x="400" y="130" font-family="monospace" font-size="12" text-anchor="middle" fill="#4b5563">Prev Hash: 0xAbc...</text>
+                            </g>
+                            <!-- Block N+1 (New Block) -->
+                            <g>
+                                <rect x="600" y="50" width="150" height="100" rx="10" fill="url(#grad1)" stroke="#f97316" stroke-width="2"/>
+                                <text x="675" y="80" font-family="Inter, sans-serif" font-weight="600" text-anchor="middle" fill="white">Block N+1</text>
+                                <text x="675" y="110" font-family="monospace" font-size="12" text-anchor="middle" fill="white">Hash: 0xGhi...</text>
+                                <text x="675" y="130" font-family="monospace" font-size="12" text-anchor="middle" fill="white">Prev Hash: 0xDef...</text>
+                            </g>
+                            <!-- Links -->
+                            <path d="M 200 100 H 325" stroke="#9ca3af" stroke-width="2" stroke-dasharray="5,5"/>
+                            <path d="M 475 100 H 600" stroke="#9ca3af" stroke-width="2" stroke-dasharray="5,5"/>
+                            <circle cx="200" cy="100" r="4" fill="#9ca3af"/>
+                            <circle cx="325" cy="100" r="4" fill="#9ca3af"/>
+                            <circle cx="475" cy="100" r="4" fill="#9ca3af"/>
+                            <circle cx="600" cy="100" r="4" fill="#9ca3af"/>
+                        </svg>
+                         <p class="text-xs text-slate-500 mt-2">每個新區塊都包含前一個區塊的「雜湊值 (Hash)」，形成一條不可竄改的鏈。</p>
+                    </div>
+
+                    <h3>2. 去中心化：沒有 CEO 的全球網路</h3>
+                    <p>這本公開帳本並非存放在某家銀行的伺-服器裡，而是由全球成千上萬台電腦（稱為「節點」）共同維護。沒有任何單一實體可以控制或關閉這個網路。這就是<span class="highlight-term">去中心化</span>的核心精神——權力分散，系統的運作由共識演算法決定，而非單一機構的指令。</p>
+
+                    <h3>3. 挖礦 (工作量證明 PoW)：驗證交易的競爭過程</h3>
+                    <p>既然沒有銀行來處理交易，誰來負責將新的交易紀錄寫入帳本呢？答案是「礦工 (Miners)」。礦工們透過強大的電腦算力，競爭解決一道複雜的數學難題。第一個解出答案的礦工，就能獲得打包下一個區塊的權利，並獲得新生成的比特幣（區塊獎勵）與交易手續費作為回報。這種透過消耗真實世界成本（電力、硬體）來保障網路安全的機制，稱為<span class="highlight-term">工作量證明 (Proof-of-Work)</span>。</p>
+
+                    <h3>4. 2100萬枚的稀缺性：數位黃金的基石</h3>
+                    <p>比特幣的發行總量被程式碼永久鎖定在<strong>2100萬枚</strong>。這種內建的、可驗證的稀缺性，使其具備了對抗通膨的潛力，這也是許多人將其比作「數位黃金」的主要原因。</p>
+
+                </section>
+                
+                <!-- Action: How to Evaluate and Participate -->
+                <section id="toc-heading-3" class="prose max-w-none prose-slate prose-a:text-orange-600 hover:prose-a:text-orange-500 mt-12">
+                    <h2 class="font-noto">行動 (Action): 如何評估與安全參與？</h2>
+                    <p>儘管前景看好，但投資比特幣仍伴隨著不可忽視的風險。在投入資金前，您必須了解以下幾點：</p>
+                    <div class="alert alert-warning">
+                        <strong>⚠️ 風險提示：價格波動劇烈</strong><br>
+                        比特幣的價格以高波動性著稱，單日漲跌幅超過10%是常態。投資者必須做好心理準備，並投入自己能夠承受損失的資金。
+                    </div>
+                    <ul>
+                        <li><strong>監管不確定性：</strong> 全球各國對加密貨幣的監管政策仍在不斷演變，任何重大政策變化都可能對市場產生巨大影響。</li>
+                        <li><strong>安全責任自負：</strong> 作為一個去中心化的資產，保護私鑰的責任完全落在用戶自己身上。一旦私鑰丟失或被盜，資產將永久無法找回。<strong>「Not your keys, not your coins」</strong>是加密世界的第一守則。</li>
+                    </ul>
+                </section>
+
+                <!-- FAQ -->
+                <section id="toc-heading-4" class="prose max-w-none prose-slate prose-a:text-orange-600 hover:prose-a:text-orange-500 mt-12">
+                    <h2 class="font-noto">常見問題 (FAQ)</h2>
+                    <div class="space-y-4">
+                        <div class="faq-item border rounded-lg">
+                            <details class="p-4 group">
+                                <summary class="flex justify-between items-center cursor-pointer font-semibold">
+                                    <span>Q1: 我需要購買一整枚比特幣嗎？</span>
+                                    <svg class="arrow-down w-5 h-5 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+                                </summary>
+                                <div class="mt-4 text-slate-600">
+                                    <p>完全不需要。比特幣可以被分割到小數點後八位，最小單位是「聰 (Satoshi)」。您可以根據自己的預算購買任意金額的比特幣。</p>
+                                </div>
+                            </details>
+                        </div>
+                         <div class="faq-item border rounded-lg">
+                            <details class="p-4 group">
+                                <summary class="flex justify-between items-center cursor-pointer font-semibold">
+                                    <span>Q2: 比特幣交易是匿名的嗎？</span>
+                                    <svg class="arrow-down w-5 h-5 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+                                </summary>
+                                <div class="mt-4 text-slate-600">
+                                    <p>不是完全匿名，而是「假名 (Pseudonymous)」。雖然您的真實身分沒有直接連結到您的比特幣地址，但所有交易都在區塊鏈上公開可查。透過鏈上分析，仍有可能追蹤到資金的流向。</p>
+                                </div>
+                            </details>
+                        </div>
+                         <div class="faq-item border rounded-lg">
+                            <details class="p-4 group">
+                                <summary class="flex justify-between items-center cursor-pointer font-semibold">
+                                    <span>Q3: 比特幣的價格由誰決定？</span>
+                                    <svg class="arrow-down w-5 h-5 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+                                </summary>
+                                <div class="mt-4 text-slate-600">
+                                    <p>和其他自由市場的資產一樣，比特幣的價格由<strong>市場供需關係</strong>決定。當買方需求大於賣方供給時，價格上漲，反之亦然。</p>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                </section>
+                
+            </article>
+        </div>
     </main>
 
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2024 LMY's Crypto Blog. All Rights Reserved.</p>
+    <footer class="bg-slate-900 text-slate-400 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-sm">
+            <p>&copy; 2025 Crypto Mastermind. All Rights Reserved.</p>
+            <p class="mt-2">免責聲明：本站內容僅供資訊參考，不構成任何投資建議。</p>
         </div>
     </footer>
 
+    <!-- TOC Generation Script -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const tocList = document.getElementById('toc-list');
+        const article = document.querySelector('article');
+        if (!tocList || !article) return;
+
+        const headings = article.querySelectorAll('h2');
+        let tocHTML = '';
+        headings.forEach((heading, index) => {
+            const id = heading.parentElement.id || 'toc-heading-' + index;
+            heading.parentElement.id = id;
+            const listItem = `<li><a href="#${id}" class="block py-1 hover:text-orange-500 font-medium transition-colors">${heading.textContent}</a></li>`;
+            tocHTML += listItem;
+        });
+        tocList.innerHTML = tocHTML;
+    });
+    </script>
 </body>
 </html>
+
