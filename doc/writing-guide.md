@@ -1,6 +1,6 @@
-# ✍️ LMY's Crypto Blog - 文章風格指南
+# ✍️ CryptoCompound - 文章風格指南
 
-這份文件旨在為所有 `LMY's Crypto Blog` 的文章建立一套統一、高標準的風格與結構。遵循此指南將有助於我們產出高品質、風格一致且對讀者極具吸引力的內容。
+這份文件旨在為所有 `CryptoCompound` 的文章建立一套統一、高標準的風格與結構。遵循此指南將有助於我們產出高品質、風格一致且對讀者極具吸引力的內容。
 
 > **技術檢查清單請參考** [`doc/new-page-checklist.md`](new-page-checklist.md) - 專注於 HTML 結構、SEO 設定等技術層面。
 
@@ -67,14 +67,14 @@
     -   **I (Intriguing - 引發好奇):** 使用**比喻、提問或知識缺口** (例如：Stacks 和閃電網路誰是未來？)。
     -   **P (Problem-Solving - 解決問題):** 直接命中讀者的**痛點** (例如：比特幣網路擁堵、手續費高)。
 -   **B.R.A.V.E. 框架 (點擊觸發器)**
-    -   **B (Brand - 品牌):** 在標題結尾加入「**| LMY's Crypto Blog**」。
+    -   **B (Brand - 品牌):** 在標題結尾加入「**| CryptoCompound**」。
     -   **R (Recentness - 時效性):** 若內容具時效性，可加入**年份** (例如：「2025年」)。
     -   **A (Amount - 數量):** 使用**具體數字** (例如：「3大主流方案」)。
     -   **V (Velocity - 速度):** 強調**效率** (例如：「5分鐘搞懂」)。
     -   **E (Economy - 經濟性):** 強調**免費或高CP值** (例如：「完整指南」)。
 
 -   **綜合應用範例**：
-    -   `比特幣 Layer 2 - 2025年尋找下個 Alpha：5分鐘搞懂 Stacks、閃電網路等3大主流方案的完整指南 | LMY's Crypto Blog`
+    -   `比特幣 Layer 2 - 2025年尋找下個 Alpha：5分鐘搞懂 Stacks、閃電網路等3大主流方案的完整指南 | CryptoCompound`
 
 ---
 
@@ -188,12 +188,12 @@
       "description": "文章的詳細描述",
       "author": {
         "@type": "Organization",
-        "name": "LMY's Crypto Blog",
+        "name": "Crypto Compound",
         "url": "https://lmybtc.github.io/"
       },
       "publisher": {
         "@type": "Organization",
-        "name": "LMY's Crypto Blog"
+        "name": "Crypto Compound"
       },
       "datePublished": "YYYY-MM-DD",
       "dateModified": "YYYY-MM-DD"
