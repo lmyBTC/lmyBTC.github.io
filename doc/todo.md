@@ -25,16 +25,26 @@
 根據 `post/topic-core.html` 的規劃，完成四篇核心概念文章的頁面建置，並確保其內容結構符合 `doc/writing-guide.md` 的規範。
 
 ---
+助我執行
 
-### Phase 1: 建立文章模板與首篇文章 (預計完成日期: 2024-05-24)
 
-*   **Task 1.1:** 根據 `writing-guide.md` 中的規範，建立一個可重複使用的文章頁面 HTML 模板 (`article-template.html`)。 (To Do)
-*   **Task 1.2:** 使用新模板建立第一篇文章 `post/core-btc.html`，並填入符合指南的內容結構。 (To Do)
-*   **Task 1.3:** 根據 `writing-guide.md` 的發布流程，將 `core-btc.html` 的資訊更新至 `archive.html` 與 `sitemap.xml`。 (To Do)
 
-### Phase 2: 完成其餘核心概念文章 (預計完成日期: 2024-05-31)
+方案二：使用「兩個倉庫」+「GitHub Actions 自動化」(最常見的免費方案)的操作細節 我要一步一步做
 
-*   **Task 2.1:** 複製模板，建立 `post/core-eth-alt.html` 頁面。 (To Do)
-*   **Task 2.2:** 複製模板，建立 `post/core-meme.html` 頁面。 (To Do)
-*   **Task 2.3:** 複製模板，建立 `post/core-rwa.html` 頁面。 (To Do)
-*   **Task 2.4:** 將上述三篇文章的資訊，批次更新至 `archive.html` 與 `sitemap.xml`。 (To Do)
+
+
+
+
+source-lmyBTC.github.io 這個是私人倉庫
+
+https://github.com/lmyBTC/source-lmyBTC.github.io.git
+
+
+
+lmyBTC.github.io 這個是公開倉庫
+
+https://github.com/lmyBTC/lmyBTC.github.io.git
+
+
+
+我要怎麼繼續執行
