@@ -1,0 +1,25 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # 當推送到 main 分支時觸發
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0 # 確保獲取完整的 Git 歷史，對於部署到 gh-pages 很重要
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.DEPLOY_TOKEN }} # 使用我們剛才設定的 Secret
+        publish_dir: ./ # 您的網站檔案所在的目錄 (這裡假設是倉庫根目錄)
+        publish_branch: main # 部署到公開倉庫的哪個分支 (通常是 main 或 gh-pages)
+        external_repository: lmyBTC/lmyBTC.github.io # 公開倉庫的名稱 (格式: username/repository)
+        force_orphan: true # 強制推送一個新的孤立分支，確保公開倉庫只包含 publish_dir 的內容
