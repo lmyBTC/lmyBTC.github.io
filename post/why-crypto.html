@@ -147,75 +147,112 @@
                         <p>本報告旨在深入剖析全球範圍內不同群體採用加密貨幣的核心動機——即「為何」(The Why)。透過對大量調查數據、市場分析及學術研究的綜合整理，本報告揭示了加密貨幣的吸引力並非單一因素驅動，而是一個由金融投機、技術理想、經濟實用性及深層心理因素交織而成的複雜馬賽克。分析顯示，從尋求超額回報的散戶投資者，到佈局未來金融基礎設施的機構，再到在高通膨國家尋求資產避風港的普通民眾，每一類參與者都有其獨特且明確的動機。</p>
                     </section>
                     
-                    <div class="not-prose my-16">
-                        <h3 class="text-xl font-bold text-slate-800 font-noto mb-6 text-center">加密貨幣採用動機之使用者原型</h3>
-                         <svg role="img" aria-labelledby="infographic-title infographic-desc" viewBox="0 0 800 600" class="w-full h-auto">
-                            <title id="infographic-title">加密貨幣採用動機之使用者原型資訊圖表</title>
-                            <desc id="infographic-desc">一張中心輻射式圖表，中心為“Why Crypto?”，向外輻射出五個使用者原型：散戶投機者、機構策略家、務實使用者、生態系建設者和數位收藏家，並分別描述了他們的核心動機。</desc>
-                            
-                            <!-- Center Element -->
-                            <g>
-                                <circle cx="400" cy="300" r="70" fill="#8b5cf6"/>
-                                <text x="400" y="305" text-anchor="middle" font-size="24" font-weight="bold" fill="white" class="font-noto">Why Crypto?</text>
-                            </g>
-                            
-                            <!-- Lines -->
-                            <line x1="400" y1="230" x2="400" y2="150" stroke="#d1d5db" stroke-width="2"/>
-                            <line x1="330" y1="300" x2="200" y2="300" stroke="#d1d5db" stroke-width="2"/>
-                            <line x1="470" y1="300" x2="600" y2="300" stroke="#d1d5db" stroke-width="2"/>
-                            <line x1="350" y1="350" x2="250" y2="450" stroke="#d1d5db" stroke-width="2"/>
-                            <line x1="450" y1="350" x2="550" y2="450" stroke="#d1d5db" stroke-width="2"/>
+              
 
-                            <!-- Archetypes -->
-                            <g class="infographic-card" transform="translate(300, 20)">
-                                <foreignObject width="200" height="130">
-                                    <div xmlns="http://www.w3.org/1999/xhtml" class="p-4 bg-white border border-slate-200 rounded-lg h-full">
-                                        <h4 class="font-bold text-sm font-noto text-slate-800">散戶投機者</h4>
-                                        <p class="text-xs text-slate-600 mt-1"><strong>核心動機:</strong><br/>財富創造 & 金融投機</p>
-                                    </div>
-                                </foreignObject>
-                            </g>
-                             <g class="infographic-card" transform="translate(0, 235)">
-                                <foreignObject width="200" height="130">
-                                    <div xmlns="http://www.w3.org/1999/xhtml" class="p-4 bg-white border border-slate-200 rounded-lg h-full">
-                                        <h4 class="font-bold text-sm font-noto text-slate-800">機構策略家</h4>
-                                        <p class="text-xs text-slate-600 mt-1"><strong>核心動機:</strong><br/>投資組合多元化 & Alpha 尋求</p>
-                                    </div>
-                                </foreignObject>
-                            </g>
-                             <g class="infographic-card" transform="translate(600, 235)">
-                                <foreignObject width="200" height="130">
-                                    <div xmlns="http://www.w3.org/1999/xhtml" class="p-4 bg-white border border-slate-200 rounded-lg h-full">
-                                        <h4 class="font-bold text-sm font-noto text-slate-800">務實使用者</h4>
-                                        <p class="text-xs text-slate-600 mt-1"><strong>核心動機:</strong><br/>經濟實用性 & 必要性</p>
-                                    </div>
-                                </foreignObject>
-                            </g>
-                             <g class="infographic-card" transform="translate(50, 450)">
-                                <foreignObject width="200" height="130">
-                                    <div xmlns="http://www.w3.org/1999/xhtml" class="p-4 bg-white border border-slate-200 rounded-lg h-full">
-                                        <h4 class="font-bold text-sm font-noto text-slate-800">生態系建設者</h4>
-                                        <p class="text-xs text-slate-600 mt-1"><strong>核心動機:</strong><br/>意識形態信念 & 技術創新</p>
-                                    </div>
-                                </foreignObject>
-                            </g>
-                            <g class="infographic-card" transform="translate(550, 450)">
-                                <foreignObject width="200" height="130">
-                                    <div xmlns="http://www.w3.org/1999/xhtml" class="p-4 bg-white border border-slate-200 rounded-lg h-full">
-                                        <h4 class="font-bold text-sm font-noto text-slate-800">數位收藏家</h4>
-                                        <p class="text-xs text-slate-600 mt-1"><strong>核心動機:</strong><br/>社會地位 & 社群認同</p>
-                                    </div>
-                                </foreignObject>
-                            </g>
-                        </svg>
-                    </div>
+                    <section id="toc-heading-1">
+                    <section>
+                        <h2>第一節：使用者原型概覽：動機矩陣與量化比較</h2>
+                        <div class="not-prose my-12 overflow-x-auto">
+                            <h3 class="text-xl font-bold text-slate-800 font-noto mb-4" id="toc-heading-2">使用者動機綜合矩陣</h3>
+                            <table class="w-full text-sm border-collapse">
+                                <thead class="bg-slate-100">
+                                    <tr>
+                                        <th class="p-3 font-semibold text-left border-b-2 border-slate-300">維度</th>
+                                        <th class="p-3 font-semibold text-left border-b-2 border-slate-300">散戶投機者</th>
+                                        <th class="p-3 font-semibold text-left border-b-2 border-slate-300">機構策略家</th>
+                                        <th class="p-3 font-semibold text-left border-b-2 border-slate-300">務實使用者</th>
+                                        <th class="p-3 font-semibold text-left border-b-2 border-slate-300">生態系建設者</th>
+                                        <th class="p-3 font-semibold text-left border-b-2 border-slate-300">數位收藏家</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-slate-700">
+                                    <tr class="border-b border-slate-200">
+                                        <td class="p-3 align-top"><strong>核心驅動力</strong></td>
+                                        <td class="p-3 align-top">快速財富增值</td>
+                                        <td class="p-3 align-top">風險調整後回報</td>
+                                        <td class="p-3 align-top">資產保值/效用</td>
+                                        <td class="p-3 align-top">意識形態實現</td>
+                                        <td class="p-3 align-top">身份/社群</td>
+                                    </tr>
+                                    <tr class="border-b border-slate-200">
+                                        <td class="p-3 align-top"><strong>風險偏好</strong></td>
+                                        <td class="p-3 align-top">高</td>
+                                        <td class="p-3 align-top">中至高 (經計算)</td>
+                                        <td class="p-3 align-top">低 (尋求穩定)</td>
+                                        <td class="p-3 align-top">極高 (概念性)</td>
+                                        <td class="p-3 align-top">高 (投機性)</td>
+                                    </tr>
+                                    <tr class="border-b border-slate-200">
+                                        <td class="p-3 align-top"><strong>關鍵資產</strong></td>
+                                        <td class="p-3 align-top">比特幣、以太幣、迷因幣</td>
+                                        <td class="p-3 align-top">比特幣、以太幣 (主要通過 ETF)</td>
+                                        <td class="p-3 align-top">穩定幣 (USDC, USDT)</td>
+                                        <td class="p-3 align-top">平台原生代幣 (ETH, SOL)</td>
+                                        <td class="p-3 align-top">NFT</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3 align-top"><strong>成功衡量標準</strong></td>
+                                        <td class="p-3 align-top">投資組合的美元價值</td>
+                                        <td class="p-3 align-top">Alpha、夏普比率</td>
+                                        <td class="p-3 align-top">購買力的維持</td>
+                                        <td class="p-3 align-top">協議的採用率/去中心化程度</td>
+                                        <td class="p-3 align-top">藏品的稀有度/社會聲望</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="not-prose my-12 overflow-x-auto">
+                            <h3 class="text-xl font-bold text-slate-800 font-noto mb-4" id="toc-heading-3">主流資產風險回報特徵比較 (量化分析)</h3>
+                            <p class="text-sm text-slate-600">要理解為何加密貨幣對「機構策略家」與「散戶投機者」具有強大吸引力，必須將其風險回報特徵與傳統資產進行量化對比。下表基於過去 5-10 年的歷史數據，提供了一個宏觀視角：</p>
+                            <table class="w-full text-sm border-collapse mt-4">
+                                <thead class="bg-slate-100">
+                                    <tr>
+                                        <th class="p-3 font-semibold text-left border-b-2 border-slate-300">資產類別</th>
+                                        <th class="p-3 font-semibold text-left border-b-2 border-slate-300">年化報酬率 (CAGR)</th>
+                                        <th class="p-3 font-semibold text-left border-b-2 border-slate-300">年化波動率 (風險)</th>
+                                        <th class="p-3 font-semibold text-left border-b-2 border-slate-300">夏普比率 (風險調整後回報)</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-slate-700">
+                                    <tr class="border-b border-slate-200">
+                                        <td class="p-3 align-top"><strong>比特幣</strong></td>
+                                        <td class="p-3 align-top text-red-600 font-semibold">~ 50-100%+</td>
+                                        <td class="p-3 align-top text-red-600 font-semibold">> 70%</td>
+                                        <td class="p-3 align-top font-semibold">~ 0.8 - 1.2</td>
+                                    </tr>
+                                    <tr class="border-b border-slate-200">
+                                        <td class="p-3 align-top"><strong>黃金</strong></td>
+                                        <td class="p-3 align-top">~ 2-6%</td>
+                                        <td class="p-3 align-top">~ 15-20%</td>
+                                        <td class="p-3 align-top">~ 0.1 - 0.4</td>
+                                    </tr>
+                                    <tr class="border-b border-slate-200">
+                                        <td class="p-3 align-top"><strong>標普500 (S&P 500)</strong></td>
+                                        <td class="p-3 align-top">~ 10-14%</td>
+                                        <td class="p-3 align-top">~ 15-20%</td>
+                                        <td class="p-3 align-top">~ 0.5 - 0.8</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3 align-top"><strong>不動產投資信託 (REITs)</strong></td>
+                                        <td class="p-3 align-top">~ 8-12%</td>
+                                        <td class="p-3 align-top">~ 20-25%</td>
+                                        <td class="p-3 align-top">~ 0.4 - 0.6</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="text-xs text-slate-500 mt-2">註：此表為基於歷史數據的宏觀特徵比較，不代表未來表現。數據會因統計週期而有顯著差異。</p>
+                            <p class="text-sm text-slate-600 mt-4"><strong>分析師洞察：</strong> 從數據中可以清晰地看到比特幣的<span class="highlight-term">非對稱回報</span>特性。儘管其波動率極高，但其驚人的長期年化報酬率使其夏普比率（衡量每一單位風險所能換取的回報）在歷史上優於多數主流資產。這正是吸引「機構策略家」將其作為投資組合「Alpha 增強劑」，以及「散戶投機者」追求財富躍升的核心原因。</p>
+                        </div>
+                    </section>
                     
                     <div class="not-prose my-16 section-divider">
                         <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" /></svg>
                     </div>
 
-                    <section id="toc-heading-1">
-                        <h2>第一節：動機的演進：從意識形態到全球現象</h2>
+                    <section id="toc-heading-4">
+                    <section>
+                        <h2>第二節：動機的演進：從意識形態到全球現象</h2>
                         <h3>最初的火種：密碼龐克理想</h3>
                         <p>加密貨幣的誕生並非源於對財富的追求，而是植根於對一個更開放、更自由的數位世界的哲學構想。早期的採用者主要是由「密碼龐克」(Cypherpunk) 精神所感召的開發者和思想家，他們尋求利用密碼學來保障個人隱私、抵制審查，並在一個不受中央機構控制的環境中進行交易。</p>
                         <h3>轉向金融化：從支付工具到投機資產</h3>
@@ -228,25 +265,18 @@
                          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" /></svg>
                     </div>
 
-                    <section id="toc-heading-2">
-                        <h2>第二節：散戶投資者：雄心、好奇心與心理的交響曲</h2>
+                    <section id="toc-heading-5">
+                    <section>
+                        <h2>第三節：散戶投資者：雄心、好奇心與心理的交響曲</h2>
                         <h3>人口統計學深度剖析</h3>
                         <p>數據一致顯示，加密貨幣的散戶基礎呈現出年輕化和男性為主導的特徵。摩根大通 (J.P. Morgan) 的研究指出，Z 世代和千禧世代的參與率超過 20%，且男性投資的可能性是女性的兩倍。然而，這種人口結構正在逐漸擴大和多元化，女性與較低收入群體的參與度正在增長。</p>
+                        <p class="mt-4">截至 2025 年，全球加密貨幣用戶總數已穩步增長至超過 5.6 億人，相較於 2024 年初的 4.3 億，增長顯著。展望未來，市場預測普遍樂觀，預計到 2030 年，全球用戶數有望達到甚至超過 10 億大關，標誌著該技術正從早期採用階段，加速邁向主流普及的拐點。</p>
+                        <div class="not-prose alert alert-analyst mt-6">
+                            <strong>分析師洞察：S 型採用曲線 (S-Curve Adoption)</strong>
+                            <p>目前約 6-7% 的全球網路用戶持有加密貨幣，這一比例在技術採用生命週期中，類似於 1990 年代末期的網際網路。這意味著我們正處於 S 型採用曲線的早期陡峭爬升階段。如果加密貨幣能成功跨越從「早期採用者」到「早期大眾」的鴻溝，其未來的增長潛力將是指數級的。</p>
+                        </div>
                         <h3>核心驅動力分析</h3>
-                        <p>絕大多數散戶進入市場的首要動機是獲取財務收益（約 60%）。在純粹的利潤追求之外，對現有金融體系的不滿（47% 認為有待改進）和對新技術的嚮往（50% 出於好奇心）也是重要驅動力。此外，<strong>錯失恐懼症 (FOMO)</strong> 與來自親友的推薦（43% 的首次購買觸發點）等社會影響力，扮演了臨門一腳的關鍵角色。</p>
-                    </section>
-
-                    <div class="not-prose my-16 section-divider">
-                         <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" /></svg>
-                    </div>
-                    
-                    <section id="toc-heading-3">
-                        <h2>第三節：機構參與者：尋求 Alpha 與佈局基礎設施</h2>
-                        <p>近年來，機構投資者開始大規模進入加密貨幣領域。他們的「為何」較少受到情緒驅動，更具戰略性，聚焦於嚴謹的金融計算和對長期技術變革的佈局。</p>
-                        <h3>核心動機分析</h3>
-                        <p>機構投資者的動機主要圍繞三大核心戰略目標：追求高風險調整後回報 (近 70% 的機構認同)、投資組合多元化 (76% 投資代幣化的動機) 以及投資於創新技術 (49% 的動機)。</p>
-                        <h3>長期賽局：代幣化與未來金融軌道</h3>
-                        <p>除了對加密資產本身的投機，更具遠見的機構將區塊鏈視為對現有金融基礎設施的根本性升級。「代幣化」——即將私募股權、債券等現實世界資產 (RWA) 放置在區塊鏈上——是這一長期願景的核心。</p>
+                        <p>絕大多數散戶進入市場的首要動機是獲取財務收益（約 60%）。在純粹的利潤追求之外，對現有金融體系的不滿（47% 認為有待改進）和對新技術的嚮往（50% 出於好奇心）也是重要驅動動力。此外，<strong>錯失恐懼症 (FOMO)</strong> 與來自親友的推薦（43% 的首次購買觸發點）等社會影響力，扮演了臨門一腳的關鍵角色。</p>
                     </section>
 
                     <div class="not-prose my-16 section-divider">
@@ -254,6 +284,7 @@
                     </div>
 
                     <section id="toc-heading-4">
+                    <section>
                         <h2>第四節：務實使用者：作為經濟生命線的加密貨幣</h2>
                         <h3>通膨對沖的爭議</h3>
                         <p>比特幣是否能有效對沖通膨，是市場上最激烈的辯論之一。支持者認為其固定的供應量使其免受法定貨幣貶值的影響，而反對者則指出其價格波動性及與風險資產的相關性削弱了其避險屬性。</p>
@@ -266,6 +297,7 @@
                     </div>
 
                     <section id="toc-heading-5">
+                    <section>
                         <h2>第五節：生態系參與者：建設者、創造者與收藏家</h2>
                         <h3>Web3 建設者：被新數位意識形態所驅動</h3>
                         <p>Web3 開發者的主要動機是意識形態層面的。他們被去中心化的核心信條所吸引，希望賦予使用者對其數據和數位資產的「真正所有權」，打破 Web2 時代由平台控制用戶數據的模式。</p>
@@ -278,6 +310,7 @@
                     </div>
 
                     <section id="toc-heading-6">
+                    <section>
                         <h2>第六節：綜合分析與未來展望</h2>
                         <div class="not-prose my-12 overflow-x-auto">
                             <h3 class="text-xl font-bold text-slate-800 font-noto mb-4">表 2：加密貨幣使用者動機綜合矩陣</h3>
@@ -357,9 +390,11 @@
         if (!tocList || !article) return;
 
         const headings = article.querySelectorAll('h2, h3');
+        const headings = article.querySelectorAll('h2');
         let tocHTML = '';
         let h2Counter = 0;
         const romanNumerals = ["I", "II", "III", "IV", "V", "VI", "VII"];
+        const romanNumerals = ["I", "II", "III", "IV", "V", "VI"];
 
         headings.forEach((heading) => {
             const id = 'toc-' + heading.textContent.trim().toLowerCase().replace(/\s+/g, '-');
@@ -383,6 +418,19 @@
                         </a>
                     </li>`;
             }
+        headings.forEach((heading, index) => {
+            const section = heading.parentElement;
+            const id = 'toc-heading-' + index;
+            section.id = id;
+            const roman = romanNumerals[index] || (index + 1);
+            const listItem = `
+                <li>
+                    <a href="#${id}" class="flex items-start py-1 hover:text-violet-500 font-medium transition-colors">
+                        <span class="w-8 text-left font-semibold">${roman}.</span>
+                        <span>${heading.textContent}</span>
+                    </a>
+                </li>`;
+            tocHTML += listItem;
         });
         tocList.innerHTML = tocHTML;
     });
