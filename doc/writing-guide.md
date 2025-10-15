@@ -149,7 +149,7 @@
        <tr><th>排名</th><th>項目</th><th>TVL</th></tr>
      </thead>
      <tbody>
-       <tr><td>🥇 TVL 冠軍</td><td><strong>Merlin Chain</strong></td><td><strong>$2.5B</strong></td></tr>
+       <tr><td> TVL 冠軍</td><td><strong>Merlin Chain</strong></td><td><strong>$2.5B</strong></td></tr>
        <!-- more rows... -->
      </tbody>
    </table>
