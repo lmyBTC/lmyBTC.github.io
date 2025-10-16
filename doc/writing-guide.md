@@ -80,80 +80,152 @@
 
 ## 內容與語氣
 
--   **專業口吻**：適時使用「**技術重點**」、「**風險提示**」等提示框，增加內容的權威性。
--   **善用比喻**：將複雜的技術概念轉化為簡單易懂的比喻 (例如：*閃電網路是比特幣主幹道旁的「高速公路」*)。
--   **強調重點**：對於段落中的關鍵字詞，使用 `<strong>` 標籤或 `<span class="highlight-term">` 來凸顯。
--   **讀者觀點**：從讀者會遇到的具體問題出發，讓文章內容能真正解決他們的問題。
--   **精簡圖示**：**原則上禁止使用任何裝飾性圖示（包含 Emoji）**，以維持版面的專業性。僅在功能性提示框中由 CSS 自動添加。
+### 1. **專業口吻**
+   - 適時使用「**分析師洞察**」、「**風險提示**」等提示框，增加內容的權威性。
+
+### 2. **善用比喻**
+   - 將複雜的技術概念轉化為簡單易懂的比喻。例如：
+     - *Chainlink 是區塊鏈與現實世界之間的「數據橋樑」。*
+     - *Layer 2 是以太坊主網的「高速公路」。*
+
+### 3. **強調重點**
+   - 對於段落中的關鍵字詞與數據，使用 `<strong>` 標籤或 `<span class="highlight-term">` 來凸顯。
+
+### 4. **善用讀者觀點**
+   - 在撰寫前，先思考讀者為何會搜尋這個主題？他們可能遇到了什麼具體問題（例如：Gas Fee 太高、找不到 Alpha），或是有什麼樣的目標（例如：對抗通膨、尋求高額回報）。
+   - 從讀者會遇到的日常生活情境出發，分析其背後的意圖與困難，讓文章內容能真正解決他們的問題，而不只是單純的知識陳列。
+
+### 5. **精簡圖示 (Icon) 使用**
+   - **原則禁止，例外手動**：為維持版面的專業性與內容的純粹性，**原則上禁止使用任何裝飾性圖示（包含 Emoji）**。
+   - 任何圖示的出現，都應是經過審慎評估後，由編輯**手動明確加入**的，絕非自動或常規性添加。
+   - 目標是讓視覺焦點完全回歸內容本身，避免任何不必要的視覺干擾。
+
+### 6. **全面專業潤稿 (Full-Pass Proofreading)**
+   - **目標**：在完成初稿後，進行一次徹底的專業潤稿，根除所有可能削弱文章權威性的元素。
+   - **核心原則**：
+     - **消除「內容農場」語氣**：避免使用過於聳動、誇大或缺乏根據的語句。
+     - **整合專家觀點**：將「分析師洞察」、「風險提示」等外部標籤，無縫地融入文章的論述脈絡中。讓內容本身直接展現其專業性，而非依賴標籤。
+     - **統一沉穩語氣**：確保整篇文章的語氣一致、沉穩且充滿信賴感，避免過於口語化的表達。
+     - **優化起承轉合**：檢查各段落間的邏輯連接，確保行文流暢，論述結構嚴謹。
+   - **最終成果**：潤稿後的文章應是一份精雕細琢的權威指引，而非僅僅是資訊的堆砌。
+
+### 7. **優化提示框文字分段**
+   - 在使用 `.alert` 提示框（如「分析師的投資框架」）時，應適度將長句切分為短句或條列式，以加強語氣和視覺指引，讓核心建議更清晰有力。
+
 
 ---
-
 ## 格式化與常用 CSS Class
 
-### 1. 提示框 (`.alert`)
-   - **一般提示**：`class="alert alert-tip"` (藍色系)
-   - **技術重點**：`class="alert alert-tech"` (綠色系)
-   - **風險警告**：`class="alert alert-warning"` (紅色系)
+為了維持視覺上的一致性，請多加利用以下預設的 CSS 樣式。
+
+> **重要規則：** 為維持版面的專業性與內容的純粹性，**原則上禁止在文章內使用任何裝飾性圖示（包含 Emoji）**。所有範例均不應包含圖示，以確保視覺焦點完全回歸內容本身。
+
+### 1. **提示框 (`.alert`)**
+   - **一般提示**：`class="alert alert-tip"` (綠色系)
+   - **分析師洞察**：`class="alert alert-analyst"` (藍色系)
+   - **風險提示**：`class="alert alert-warning"` (紅色系)
+   - **排版說明**：提示框的 `<strong>` 標題為區塊元素 (block)，會獨立成行，與下方內容分離，以增強可讀性。
 
    ```html
-   <div class="alert alert-tech">
-     <strong>技術重點：</strong> Ordinals 協議利用了比特幣 Taproot 升級的特性。
+   <div class="alert alert-analyst">
+     <strong>分析師洞察：</strong>
+     <p>比特幣的非對稱回報特性，使其成為機構投資者資產配置中重要的 Alpha 增強劑。</p>
    </div>
    ```
-   > **CSS 實作**：圖示應由 CSS `::before` 偽元素添加，而非手動插入。例如：`.alert-tech > strong::before { content: '💡'; margin-right: 8px; }`
 
-### 2. 資訊卡片 (`.info-cards`)
-   - 用於並列呈現 3-4 個核心觀點或價值主張。
+### 2. **資訊卡片 (`.info-cards`)**
+   - 用於並列呈現核心觀點或價值主張。
+   - **排版規則**：為了維持在所有裝置上的最佳閱讀體驗與排版，一個 `.info-cards` 區塊中，**不應放置超過 3 張**資訊卡片 (`.info-card`)。
 
    ```html
    <div class="info-cards">
      <div class="info-card">
-       <h4 class="info-card-title">高速交易</h4>
-       <p class="info-card-desc">提供近乎即時且低成本的交易體驗。</p>
+       <h4 class="info-card-title">價值主張一</h4>
+       <p class="info-card-desc">說明此價值主張的詳細內容...</p>
      </div>
      <!-- more cards... -->
    </div>
    ```
 
-### 3. 比較表格 (`.comparison-table`)
-   - 用於多個協議的詳細優劣比較。
+### 3. **風險類型卡片 (`.risk-card`)**
+   - 用於強調不同類型的投資風險。
+
+   ```html
+    <div class="risk-group-cards">
+      <div class="risk-card">
+        <div class="risk-card-header">
+          <h4 class="risk-card-title">技術風險</h4>
+        </div>
+        <p class="risk-card-desc">智能合約可能存在漏洞，導致資金被盜。</p>
+      </div>
+      <!-- more cards... -->
+    </div>
+   ```
+
+### 4. **數據表格 (`.data-table`)**
+   - 用於呈現代幣經濟學、市場數據等量化資訊。
+
+   ```html
+   <table class="data-table">
+     <thead>
+       <tr><th>指標</th><th>數值</th><th>說明</th></tr>
+     </thead>
+     <tbody>
+       <tr><td>市值</td><td><strong>$1.2T</strong></td><td>截至 2025 Q4</td></tr>
+       <!-- more rows... -->
+     </tbody>
+   </table>
+   ```
+
+### 5. **進階比較表格 (`.comparison-table`)**
+   - 用於多個協議或技術方案的詳細優劣比較，特別是當有「推薦選項」時。
+   - 此表格設計更具視覺引導性，能幫助讀者快速抓住重點。
 
    ```html
    <div class="comparison-table-container">
        <table class="comparison-table">
            <thead>
                <tr>
-                   <th>比較項目</th>
-                   <th>協議 A (推薦)</th>
-                   <th>協議 B</th>
+                   <th class="comparison-header-main">比較項目</th>
+                   <th class="comparison-header-option">
+                       <div class="option-badge">推薦</div>
+                       <strong>方案 A (Optimistic Rollup)</strong>
+                   </th>
+                   <th class="comparison-header-option comparison-recommended">
+                       <strong>方案 B (ZK Rollup)</strong>
+                   </th>
                </tr>
            </thead>
            <tbody>
-               <tr>
-                   <td>交易速度</td>
-                   <td>~1,000 TPS</td>
-                   <td>~100 TPS</td>
+               <tr class="comparison-row">
+                   <td class="comparison-label">生物利用率</td>
+                   <td class="comparison-cell comparison-recommended">
+                       <div class="rating-badge rating-high">中</div>
+                   </td>
+                   <td class="comparison-cell">
+                       <div class="rating-badge rating-very-high">高</div>
+                   </td>
                </tr>
-               <!-- more rows... -->
+               <tr class="comparison-row">
+                   <td class="comparison-label">優缺點</td>
+                   <td class="comparison-cell comparison-recommended">
+                       <div class="pros-cons">
+                           <div class="pros">+ EVM 兼容性高、技術成熟</div>
+                           <div class="cons">- 提款等待期長</div>
+                       </div>
+                   </td>
+                   <td class="comparison-cell">
+                       <div class="pros-cons">
+                           <div class="pros">+ 安全性高、提款快速</div>
+                           <div class="cons">- EVM 兼容性較差、生成證明計算量大</div>
+                       </div>
+                   </td>
+               </tr>
            </tbody>
        </table>
    </div>
    ```
-
-### 4. 數據表格 (`.data-table`)
-   - 用於呈現代幣經濟學或生態數據。
-
-   ```html
-   <table class="data-table">
-     <thead>
-       <tr><th>排名</th><th>項目</th><th>TVL</th></tr>
-     </thead>
-     <tbody>
-       <tr><td> TVL 冠軍</td><td><strong>Merlin Chain</strong></td><td><strong>$2.5B</strong></td></tr>
-       <!-- more rows... -->
-     </tbody>
-   </table>
-   ```
+   > **注意**: 此表格的完整 CSS 樣式較為複雜，已內建於各文章頁面的 `<style>` 區塊中。
 
 ---
 
