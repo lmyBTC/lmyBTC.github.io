@@ -23,11 +23,26 @@ body {
     color: #1e40af;
 }
 .alert-warning { /* Red */
-    background-color: #fef2f2;
-    border-color: #ef4444;
-    color: #b91c1c;
+    display: flex;
+    align-items: flex-start;
+    background-color: #fffbeb; /* amber-50 */
+    border-color: #f59e0b;   /* amber-500 */
+    color: #92400e;         /* amber-800 */
 }
-.alert p { margin: 0; }
+.alert-warning .alert-icon {
+    flex-shrink: 0;
+    margin-right: 0.75rem;
+    color: #d97706; /* amber-600 */
+}
+.alert-warning .alert-content {
+    flex-grow: 1;
+}
+.alert-warning .alert-content strong {
+    color: #b45309; /* amber-700 */
+}
+.alert p { 
+    margin: 0; 
+}
 .alert strong {
     display: block;
     font-weight: 700;
