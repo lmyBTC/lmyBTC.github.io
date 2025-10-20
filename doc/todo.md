@@ -22,32 +22,3 @@
 
 
 
-
-## 任務 20240521-01: 建立「核心概念」系列文章頁面
-
-根據 `post/topic-core.html` 的規劃，完成四篇核心概念文章的頁面建置，並確保其內容結構符合 `doc/writing-guide.md` 的規範。
-
----
-助我執行
-
-
-
-方案二：使用「兩個倉庫」+「GitHub Actions 自動化」(最常見的免費方案)的操作細節 我要一步一步做
-
-
-
-
-
-source-lmyBTC.github.io 這個是私人倉庫
-
-https://github.com/lmyBTC/source-lmyBTC.github.io.git
-
-
-
-lmyBTC.github.io 這個是公開倉庫
-
-https://github.com/lmyBTC/lmyBTC.github.io.git
-
-
-
-我要怎麼繼續執行
